@@ -84,7 +84,7 @@
                                     </a>
                                 </div>
                                 <div class="col-4 text-center">
-                                    <a href="#" class="feature-menu">
+                                    <a href="daftar_santri" class="feature-menu">
                                         <div class="icon-wrapper mx-auto">
                                         <i class="fas fa-street-view"></i>
                                         </div>
