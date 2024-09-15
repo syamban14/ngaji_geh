@@ -16,44 +16,62 @@
 			<div class="col-md-4">
 				<center>
 					<img src="<?= base_url(); ?>assets/images/logo.png" alt="" height="50px">
-					<p class="fw-bold text-white text-uppercase mb-0">Ngaji Geh</p>
-					<img src="<?= base_url(); ?>assets/images/ustadz.png" alt="" height="150px">
+					<p class="fw-bold text-white text-uppercase">Registrasi</p>
 				</center>
 				<div class="card shadow-lg" style="border-radius: 10px; overflow: hidden;">
 					<div class="card-body" style="background-color: #e0f2f1;">
-
-						<!-- Form Login Modern -->
-						<form id="loginForm">
-							<div class="form-group mb-3 position-relative">
-								<label for="username" class="sr-only">Username</label>
-								<input type="text" class="form-control form-control-lg ps-5" id="username" placeholder="Username" style="border-radius: 10px;" required>
-								<i class="fas fa-user position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: #00796b;"></i>
+						<form id="signupForm">
+							<div class="form-floating mb-2">
+							  <select class="form-select" id="role" name="role" aria-label="role">
+							    <option value="1">Ustadz/Ustadzah</option>
+							    <option value="2">Santri</option>
+							  </select>
+							  <label for="role">Sebagai</label>
 							</div>
-
-							<div class="form-group mb-3 position-relative">
-								<label for="password" class="sr-only">Password</label>
-								<input type="password" class="form-control form-control-lg ps-5" id="password" placeholder="Password" style="border-radius: 10px;" required>
-								<i class="fas fa-lock position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: #00796b;"></i>
+							<div class="form-floating mb-2">
+							  <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap">
+							  <label for="nama_lengkap">Nama Lengkap</label>
 							</div>
-
-							<div class="d-grid gap-2 mb-3">
-								<button type="submit" class="btn btn-success btn-lg" style="background-color: #09AD74; border-radius: 10px;">Login</button>
+							<div class="form-floating mb-2">
+							  <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+							  <label for="email">Email</label>
 							</div>
+							<div class="form-floating mb-2">
+							  <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+							  <label for="username">Username</label>
+							</div>
+							<div class="form-floating mb-2">
+							  <select class="form-select" id="role" name="role" aria-label="role">
+							    <option value="">- Pilih -</option>
+							    <option value="1">Sekolah Dasar</option>
+							    <option value="2">Sekolah Menengah Pertama</option>
+							    <option value="2">Sekolah Menengah Atas</option>
+							    <option value="2">Diploma</option>
+							    <option value="2">Sarjana</option>
+							  </select>
+							  <label for="role">Pendidikan</label>
+							</div>
+							<div class="form-floating mb-2">
+							  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+							  <label for="password">Password</label>
+							</div>
+							<div class="form-floating mb-2">
+							  <input type="password" class="form-control" id="k_password" name="k_password" placeholder="Konfirmasi Password">
+							  <label for="k_password">Konfirmasi Password</label>
+							</div>
+							<div class="row g-2">
+				                <div class="col">
+				                    <div class="d-grid">
+				                        <button type="button" class="btn btn-success">Submit</button>
+				                    </div>
+				                </div>
+				                <div class="col">
+				                    <div class="d-grid">
+				                        <a href="<?= base_url('login');?>" class="btn btn-secondary">Batal</a>
+				                    </div>
+				                </div>
+				            </div>
 						</form>
-
-						<p class="text-center mb-3" style="color: #004d40;">Atau login dengan</p>
-
-						<div class="d-grid gap-2 mb-3">
-							<a href="#" class="btn btn-danger btn-lg btn-block" style="border-radius: 10px;">
-								<i class="fab fa-google mr-2"></i> Google
-							</a>
-						</div>
-
-						<hr>
-
-						<div class="text-center">
-							<p class="text-muted mb-0" style="color: #004d40;">Belum punya akun? <a href="<?= base_url('sign_up');?>" style="color: #00796b;">Daftar di sini</a></p>
-						</div>
 					</div>
 				</div>
 			</div>

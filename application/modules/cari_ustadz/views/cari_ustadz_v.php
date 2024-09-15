@@ -30,15 +30,15 @@
         <button type="button" class="btn btn-outline-success" data-bs-toggle="offcanvas" data-bs-target="#filter-search" aria-controls="filter-search">
             <i class="bi bi-filter"></i>
         </button>
-        <input type="text" id="cari_ustadz" class="form-control mx-2 border-success d-none" placeholder="Cari di sini...">
+        <input type="text" id="cari_ustadz" class="form-control mx-2 border-success" placeholder="Cari di sini...">
         <div class="btn-group ms-auto" role="group" aria-label="Basic radio toggle button group">
-          <input type="radio" class="btn-check" name="btnradio" id="karosel" autocomplete="off" checked onclick="showContent('carouselUstadz')">
+          <input type="radio" class="btn-check" name="btnradio" id="karosel" autocomplete="off" onclick="showContent('carouselUstadz')">
           <label class="btn btn-outline-success" for="karosel"><i class="fas fa-users fa-fw"></i></label>
-          <input type="radio" class="btn-check" name="btnradio" id="list" autocomplete="off" onclick="showContent('list-view')">
+          <input type="radio" class="btn-check" name="btnradio" id="list" autocomplete="off" checked onclick="showContent('list-view')">
           <label class="btn btn-outline-success" for="list"><i class="fas fa-list fa-fw"></i></label>
         </div>
     </div>
-    <div id="carouselUstadz" class="carousel slide content active">
+    <div id="carouselUstadz" class="carousel slide content">
         <div class="carousel-indicators">
             <!-- ini foreach buat indikatornya ya -->
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -161,7 +161,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div id="list-view" class="content container">
+    <div id="list-view" class="content container active">
         <!-- foreach ustad disini -->
         <a  data-bs-idUstadz="isi pake idnya ustadz atau apa perlunya"
             data-bs-namaUstadz="Ust. Abdul Somad Al-Riauwi"
@@ -234,13 +234,66 @@
             </div>
         </a>
     </div>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="filter-search" aria-labelledby="filter-searchLabel">
-      <div class="offcanvas-header">
+    <div class="offcanvas offcanvas-end bg-body-secondary" tabindex="-1" id="filter-search" aria-labelledby="filter-searchLabel" style="max-width:80%;">
+      <div class="offcanvas-header border-bottom">
         <h5 class="offcanvas-title" id="filter-searchLabel">Filter Ustadz</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
-        ...
+      <div class="offcanvas-body position-relative">
+        <div class="type-ustadz mb-2">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="Ustadz" value="1">
+              <label class="form-check-label" for="Ustadz">Ustadz</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="Ustadzah" value="2">
+              <label class="form-check-label" for="Ustadzah">Ustadzah</label>
+            </div>
+        </div>
+        <div class="keahlian mb-2">
+            <p class="mb-0">Keahlian</p>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="Al-Quran">
+              <label class="form-check-label" for="Al-Quran">
+                Al-Qur'an
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="Tafsir">
+              <label class="form-check-label" for="Tafsir">
+                Tafsir
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="Hafidz">
+              <label class="form-check-label" for="Hafidz">
+                Hafidz
+              </label>
+            </div>
+        </div>
+        <div class="keahlian mb-2">
+            <p class="mb-0">Jenis Pembelajran</p>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="tatap_muka">
+              <label class="form-check-label" for="tatap_muka">
+                Tatap Muka
+              </label>
+            </div>
+        </div>
+        <div class="container px-3 apply-filter position-absolute bottom-0 start-50 translate-middle-x mb-3">
+            <div class="row g-2">
+                <div class="col">
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-success">Terapkan</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Batal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
     </div>
     <div class="modal fade" id="detailUstadz" tabindex="-1" aria-labelledby="detailUstadzLabel" aria-hidden="true">
