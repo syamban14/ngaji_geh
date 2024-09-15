@@ -27,8 +27,11 @@
     </div>
     <div class="container filter-search mb-3 d-flex align-items-center">
         <!-- <span class="me-auto">Layout</span> -->
-        <input type="text" id="cari_ustadz" class="form-control me-2 border-success" placeholder="Cari di sini...">
-        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <button type="button" class="btn btn-outline-success" data-bs-toggle="offcanvas" data-bs-target="#filter-search" aria-controls="filter-search">
+            <i class="bi bi-filter"></i>
+        </button>
+        <input type="text" id="cari_ustadz" class="form-control mx-2 border-success d-none" placeholder="Cari di sini...">
+        <div class="btn-group ms-auto" role="group" aria-label="Basic radio toggle button group">
           <input type="radio" class="btn-check" name="btnradio" id="karosel" autocomplete="off" checked onclick="showContent('carouselUstadz')">
           <label class="btn btn-outline-success" for="karosel"><i class="fas fa-users fa-fw"></i></label>
           <input type="radio" class="btn-check" name="btnradio" id="list" autocomplete="off" onclick="showContent('list-view')">
@@ -58,7 +61,20 @@
                                         <span class="mx-3"><i class="fas fa-star text-warning"></i> 5</span>
                                         <span><i class="fas fa-map-marker-alt text-primary"></i> 2.5km</span>
                                     </div>
-                                    <button class="btn btn-success">Lihat Detail</button>
+                                    <button 
+                                        data-bs-idUstadz="isi pake idnya ustadz atau apa perlunya"
+                                        data-bs-namaUstadz="Ust. Abdul Somad Al-Riauwi"
+                                        data-bs-fotoUstadz="gambar1.jpg"
+                                        data-bs-tentangUstadz="Mempelajari Al-Qur'an dari dasar, mulai dari bacaan iqro atau tajwid"
+                                        data-bs-tarifUstadz="50.000"
+                                        data-bs-starUstadz="5"
+                                        data-bs-jarakUstadz="2.5"
+                                        data-bs-mapUstadz="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8318173477423!2d106.05036417498869!3d-6.017814393967549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e418de515555555%3A0xfb224d695183e7f2!2sMasjid%20Agung%20Nurul%20Ikhlas%20Cilegon!5e0!3m2!1sen!2sid!4v1725925559670!5m2!1sen!2sid"
+                                        class="btn btn-success"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#detailUstadz">
+                                        Lihat Detail
+                                    </button>
                                 </div>
                             </div>
                             <img src="<?= base_url();?>assets/images/gambar1.jpg" alt="...">
@@ -80,7 +96,20 @@
                                         <span class="mx-3"><i class="fas fa-star text-warning"></i> 4.5</span>
                                         <span><i class="fas fa-map-marker-alt text-primary"></i> 3km</span>
                                     </div>
-                                    <button class="btn btn-success">Lihat Detail</button>
+                                    <button 
+                                        data-bs-idUstadz="isi pake idnya ustadz atau apa perlunya"
+                                        data-bs-namaUstadz="Ust. Adi Hidayat"
+                                        data-bs-fotoUstadz="gambar2.jpg"
+                                        data-bs-tentangUstadz="Mampu mengaji dengan tajwid dan Tartil. Bisa untuk setoran hafalan atau muroja'ah"
+                                        data-bs-tarifUstadz="50.000"
+                                        data-bs-starUstadz="4.5"
+                                        data-bs-jarakUstadz="3"
+                                        data-bs-mapUstadz="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8318173477423!2d106.05036417498869!3d-6.017814393967549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e418de515555555%3A0xfb224d695183e7f2!2sMasjid%20Agung%20Nurul%20Ikhlas%20Cilegon!5e0!3m2!1sen!2sid!4v1725925559670!5m2!1sen!2sid"
+                                        class="btn btn-success"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#detailUstadz">
+                                        Lihat Detail
+                                    </button>
                                 </div>
                             </div>
                             <img src="<?= base_url();?>assets/images/gambar2.jpg" alt="...">
@@ -101,7 +130,20 @@
                                         <span class="mx-3"><i class="fas fa-star text-warning"></i> 4.4</span>
                                         <span><i class="fas fa-map-marker-alt text-primary"></i> 4km</span>
                                     </div>
-                                    <button class="btn btn-success">Lihat Detail</button>
+                                    <button 
+                                        data-bs-idUstadz="isi pake idnya ustadz atau apa perlunya"
+                                        data-bs-namaUstadz="Ust. Fikri Maulana"
+                                        data-bs-fotoUstadz="gambar1.jpg"
+                                        data-bs-tentangUstadz="Mengaji Al-Qur'an Dengan Metode Talaqqi. Bersanad Sampai ke Rasulullah SAW. Insya Allah bisa lancar mengaji"
+                                        data-bs-tarifUstadz="50.000"
+                                        data-bs-starUstadz="4.4"
+                                        data-bs-jarakUstadz="4"
+                                        data-bs-mapUstadz="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8318173477423!2d106.05036417498869!3d-6.017814393967549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e418de515555555%3A0xfb224d695183e7f2!2sMasjid%20Agung%20Nurul%20Ikhlas%20Cilegon!5e0!3m2!1sen!2sid!4v1725925559670!5m2!1sen!2sid"
+                                        class="btn btn-success"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#detailUstadz">
+                                        Lihat Detail
+                                    </button>
                                 </div>
                             </div>
                             <img src="<?= base_url();?>assets/images/gambar1.jpg" alt="...">
@@ -121,7 +163,17 @@
     </div>
     <div id="list-view" class="content container">
         <!-- foreach ustad disini -->
-        <a href="#" class="card shadow-sm rounded-3 mb-2 text-decoration-none border-success">
+        <a  data-bs-idUstadz="isi pake idnya ustadz atau apa perlunya"
+            data-bs-namaUstadz="Ust. Abdul Somad Al-Riauwi"
+            data-bs-fotoUstadz="gambar1.jpg"
+            data-bs-tentangUstadz="Mempelajari Al-Qur'an dari dasar, mulai dari bacaan iqro atau tajwid"
+            data-bs-tarifUstadz="50.000"
+            data-bs-starUstadz="5"
+            data-bs-jarakUstadz="2.5"
+            data-bs-mapUstadz="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8318173477423!2d106.05036417498869!3d-6.017814393967549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e418de515555555%3A0xfb224d695183e7f2!2sMasjid%20Agung%20Nurul%20Ikhlas%20Cilegon!5e0!3m2!1sen!2sid!4v1725925559670!5m2!1sen!2sid"
+            data-bs-toggle="modal"
+            href="#detailUstadz"
+            class="card shadow-sm rounded-3 mb-2 text-decoration-none border-success">
             <div class="card-body d-flex align-items-center p-2">
                 <img class="me-2 rounded-circle" src="<?= base_url();?>assets/images/gambar1.jpg" height="50px" width="50px" alt="...">
                 <div class="legend">
@@ -135,7 +187,17 @@
             </div>
         </a>
         <!-- sampe sini ya penutupnya ya -->
-        <a href="#" class="card shadow-sm rounded-3 mb-2 text-decoration-none border-success">
+        <a  data-bs-idUstadz="isi pake idnya ustadz atau apa perlunya"
+            data-bs-namaUstadz="Ust. Adi Hidayat"
+            data-bs-fotoUstadz="gambar2.jpg"
+            data-bs-tentangUstadz="Mampu mengaji dengan tajwid dan Tartil. Bisa untuk setoran hafalan atau muroja'ah"
+            data-bs-tarifUstadz="50.000"
+            data-bs-starUstadz="4.5"
+            data-bs-jarakUstadz="3"
+            data-bs-mapUstadz="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8318173477423!2d106.05036417498869!3d-6.017814393967549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e418de515555555%3A0xfb224d695183e7f2!2sMasjid%20Agung%20Nurul%20Ikhlas%20Cilegon!5e0!3m2!1sen!2sid!4v1725925559670!5m2!1sen!2sid"
+            data-bs-toggle="modal"
+            href="#detailUstadz"
+            class="card shadow-sm rounded-3 mb-2 text-decoration-none border-success">
             <div class="card-body d-flex align-items-center p-2">
                 <img class="me-2 rounded-circle" src="<?= base_url();?>assets/images/gambar2.jpg" height="50px" width="50px" alt="...">
                 <div class="legend">
@@ -148,7 +210,17 @@
                 </div>
             </div>
         </a>
-        <a href="#" class="card shadow-sm rounded-3 mb-2 text-decoration-none border-success">
+        <a  data-bs-idUstadz="isi pake idnya ustadz atau apa perlunya"
+            data-bs-namaUstadz="Ust. Fikri Maulana"
+            data-bs-fotoUstadz="gambar1.jpg"
+            data-bs-tentangUstadz="Mengaji Al-Qur'an Dengan Metode Talaqqi. Bersanad Sampai ke Rasulullah SAW. Insya Allah bisa lancar mengaji"
+            data-bs-tarifUstadz="50.000"
+            data-bs-starUstadz="4.4"
+            data-bs-jarakUstadz="4"
+            data-bs-mapUstadz="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8318173477423!2d106.05036417498869!3d-6.017814393967549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e418de515555555%3A0xfb224d695183e7f2!2sMasjid%20Agung%20Nurul%20Ikhlas%20Cilegon!5e0!3m2!1sen!2sid!4v1725925559670!5m2!1sen!2sid"
+            data-bs-toggle="modal"
+            href="#detailUstadz"
+            class="card shadow-sm rounded-3 mb-2 text-decoration-none border-success">
             <div class="card-body d-flex align-items-center p-2">
                 <img class="me-2 rounded-circle" src="<?= base_url();?>assets/images/gambar1.jpg" height="50px" width="50px" alt="...">
                 <div class="legend">
@@ -162,6 +234,44 @@
             </div>
         </a>
     </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="filter-search" aria-labelledby="filter-searchLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="filter-searchLabel">Filter Ustadz</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        ...
+      </div>
+    </div>
+    <div class="modal fade" id="detailUstadz" tabindex="-1" aria-labelledby="detailUstadzLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <center>
+                <input type="hidden" id="idUstadz">
+                <div id="fotoUstadz"></div>
+                <p id="tentangUstadz"></p>
+                <p class="mb-0">
+                    <strong>Tarif Per Jam</strong> : Rp <span id="tarifUstadz"></span>
+                </p>
+                <p>
+                    <strong>Rating</strong> : <span id="starUstadz"></span>
+                </p>
+            </center>
+            <div class="map-responsive" id="mapUstadz">
+                <iframe width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Pilih Ustadz</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
@@ -169,6 +279,59 @@
         function showContent(tab){
             document.querySelector('.content.active').classList.remove('active');
             document.getElementById(tab).classList.add('active');
+            if (tab=='carouselUstadz') {
+                $('#cari_ustadz').removeClass('d-block')
+                $('#cari_ustadz').addClass('d-none');
+            }
+            if (tab=='list-view') {
+                $('#cari_ustadz').removeClass('d-none');
+                $('#cari_ustadz').addClass('d-block');
+            }
+        }
+        $('#cari_ustadz').keyup(function(){
+            var value = $(this).val().toLowerCase();
+            // $(".carousel-item").filter(function() {
+            //     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            // });
+            $("#list-view > a.card").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });
+        });
+        const detailUstadz = document.getElementById('detailUstadz')
+        if (detailUstadz) {
+          detailUstadz.addEventListener('show.bs.modal', event => {
+            // Button that triggered the modal
+            const button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            const idUstadz = button.getAttribute('data-bs-idUstadz')
+            const namaUstadz = button.getAttribute('data-bs-namaUstadz')
+            const fotoUstadz = button.getAttribute('data-bs-fotoUstadz')
+            const tentangUstadz = button.getAttribute('data-bs-tentangUstadz')
+            const tarifUstadz = button.getAttribute('data-bs-tarifUstadz')
+            const starUstadz = button.getAttribute('data-bs-starUstadz')
+            const jarakUstadz = button.getAttribute('data-bs-jarakUstadz')
+            const mapUstadz = button.getAttribute('data-bs-mapUstadz')
+            // If necessary, you could initiate an Ajax request here
+            // and then do the updating in a callback.
+            var rating = '';
+            for (var i = 0; i < starUstadz; i++) {
+                rating += '<i class="fas fa-star text-warning"></i>';
+            }
+            // Update the modal's content.
+            const modalTitle = detailUstadz.querySelector('.modal-title')
+            const id = detailUstadz.querySelector('.modal-body input#idUstadz')
+            const tentang = detailUstadz.querySelector('.modal-body p#tentangUstadz')
+            const tarif = detailUstadz.querySelector('.modal-body p span#tarifUstadz')
+            const star = detailUstadz.querySelector('.modal-body p span#starUstadz')
+
+            modalTitle.textContent = `Detail ${namaUstadz}`
+            id.value = idUstadz
+            tentang.textContent = tentangUstadz
+            tarif.textContent = tarifUstadz
+            $('#fotoUstadz').html('<img class="rounded-circle" id="fotoUstadz" src="<?= base_url();?>assets/images/'+fotoUstadz+'" alt="..." width="100px" height="100px">')
+            $('#starUstadz').html('('+starUstadz+')'+rating)
+            $('#mapUstadz').html('<iframe src="'+mapUstadz+'" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>')
+          })
         }
     </script>
 </body>
