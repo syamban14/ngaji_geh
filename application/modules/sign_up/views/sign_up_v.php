@@ -19,7 +19,7 @@
 					<p class="fw-bold text-white text-uppercase">Registrasi</p>
 				</center>
 				<div class="card shadow-lg" style="border-radius: 10px; overflow: hidden;">
-					<div class="card-body" style="max-width: 400px; background-color: #e0f2f1;">
+					<div class="card-body" style="background-color: #e0f2f1;">
 						<form id="signupForm">
 							<div class="form-floating mb-2">
 							  <select class="form-select" id="role" name="role" aria-label="role">
