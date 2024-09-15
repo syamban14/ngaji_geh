@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
+	<link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
 	<style type="text/css">
 		.content {
 			display: none;
@@ -18,6 +17,19 @@
 		.content.active {
 			display: block;
 		}
+        .card-header {
+            background-color: #09AD74;
+            color: white;
+        }
+
+        .header {
+            background-color: #09AD74;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
 	</style>
 </head>
 
@@ -27,6 +39,7 @@
 			<div class="hero bg-success p-3">
 				<a class="notify" href="#">
 					<i class="bi bi-bell-fill fs-4"></i>
+					<span class="notify-number">9+</span>
 				</a>
 				<center>
 					<img src="<?= base_url(); ?>assets/images/logo.png" alt="" height="50px">
@@ -37,10 +50,10 @@
 						<img class="rounded-circle shadow" src="<?= base_url(); ?>assets/images/gambar1.jpg" width="100px" height="100px">
 					</div>
 					<div class="flex-grow-1 ms-2 p-2 bg-white rounded-4 shadow text-success">
-						<strong>Muhammad Bani Husni</strong><br>
-						<span><i class="bi bi-person-badge"></i> Santri</span><br>
-						<span><i class="bi bi-book"></i> Juz 1</span><br>
-						<span><i class="bi bi-bookmark-check"></i> Al-Baqoroh : 31</span>
+						<center><strong>Muhammad Bani Husni</strong></center>
+						<span><i class="fas fa-id-badge fa-fw"></i> Santri</span><br>
+						<span><i class="fas fa-book-open fa-fw"></i> Juz 1</span><br>
+						<span><i class="fas fa-bookmark fa-fw"></i> Al-Baqoroh : 31</span>
 					</div>
 				</div>
 			</div>
@@ -98,8 +111,18 @@
 					<p>Ini adalah halaman Artikel.</p>
 				</div>
 				<div id="riwayat" class="content">
-					<h1>Riwayat</h1>
-					<p>Ini adalah halaman Riwayat.</p>
+					<h2 class="text-center mb-4">Riwayat Hari Ini</h2>
+                    <div class="card shadow mb-2">
+                        <div class="card-header">
+                            Ngaji bersama Ust. Abdul Somad Al-Riawi
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mb-0">Surat: Al-Baqoroh</p>
+                            <p class="card-text mb-0">Ayat: 1-31</p>
+                            <p class="card-text mb-0">Jam Mengaji: 08:00 - 08:30</p>
+                            <p class="card-text mb-0">Tanggal Mengaji: 13 September 2024</p>
+                        </div>
+                    </div>
 				</div>
 				<div id="profile" class="content">
 					<div class="form-floating mb-2">
@@ -126,9 +149,12 @@ Banten, Indonesia - 42436
                         </textarea>
 						<label for="alamat">Alamat</label>
 					</div>
-					<div class="d-grid">
+					<div class="d-grid mb-2">
 						<button type="button" class="btn btn-outline-success">Edit</button>
 					</div>
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-outline-danger">Logout</button>
+                    </div>
 				</div>
 			</div>
 		</div>
