@@ -51,6 +51,7 @@
             <div class="hero bg-success p-3">
                 <a class="notify" href="#">
                     <i class="bi bi-bell-fill fs-4"></i>
+                    <span class="notify-number">9+</span>
                 </a>
                 <center>
                     <img src="<?= base_url();?>assets/images/logo.png" alt="" height="50px">
@@ -61,12 +62,11 @@
                         <img class="rounded-circle shadow" src="<?= base_url();?>assets/images/gambar1.jpg" width="100px" height="100px">
                     </div>
                     <div class="flex-grow-1 ms-2 p-2 bg-white rounded-4 shadow text-success">
-                        <center><strong>Abdul Hamid</strong></center><br>
-                        <span><i class="bi bi-person-badge"></i> Ustadz/Ustadzah</span><br>
-                        <span><i class="fas fa-mosque"></i>&nbsp;Mesjid Jombang Kali</span><br>
-                        <span><i class="bi bi-bookmark-check"></i>&nbsp;Alquran/Tafsir/Hafidz</span><br>
-                        <span><i class="fas fa-street-view"></i> Santri/Murid Saat ini : 25</span>
-                        <hr>
+                        <center><strong>Abdul Hamid</strong></center>
+                        <span><i class="fas fa-id-badge fa-fw"></i> Ustadz/Ustadzah</span><br>
+                        <span><i class="fas fa-mosque fa-fw"></i> Mesjid Jombang Kali</span><br>
+                        <span><i class="fas fa-bookmark fa-fw"></i> Alquran/Tafsir/Hafidz</span><br>
+                        <span><i class="fas fa-street-view fa-fw"></i> Santri Saat ini : 25</span>
                     </div>
                 </div>
             </div>
@@ -126,72 +126,69 @@
                 <div id="riwayat" class="content">
                     <h2 class="text-center mb-4">Riwayat Hari Ini</h2>
                     <!-- Riwayat Mengajar 1 -->
-                    <div class="card mb-3">
+                    <div class="card shadow mb-2">
                         <div class="card-header">
                             Nama Santri: Samsul Firdaus
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Surat: Al-Fatihah</p>
-                            <p class="card-text">Ayat: 1-7</p>
-                            <p class="card-text">Jam Mengaji: 08:00 - 08:30</p>
-                            <p class="card-text">Tanggal Mengaji: 13 September 2024</p>
+                            <p class="card-text mb-0">Surat: Al-Fatihah</p>
+                            <p class="card-text mb-0">Ayat: 1-7</p>
+                            <p class="card-text mb-0">Jam Mengaji: 08:00 - 08:30</p>
+                            <p class="card-text mb-0">Tanggal Mengaji: 13 September 2024</p>
                         </div>
                     </div>
 
                     <!-- Riwayat Mengajar 2 -->
-                    <div class="card mb-3">
+                    <div class="card shadow mb-2">
                         <div class="card-header">
                             Nama Santri: Fatimah Zahra
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Surat: Al-Baqarah</p>
-                            <p class="card-text">Ayat: 1-5</p>
-                            <p class="card-text">Jam Mengaji: 09:00 - 09:30</p>
-                            <p class="card-text">Tanggal Mengaji: 13 September 2024</p>
+                            <p class="card-text mb-0">Surat: Al-Baqarah</p>
+                            <p class="card-text mb-0">Ayat: 1-5</p>
+                            <p class="card-text mb-0">Jam Mengaji: 09:00 - 09:30</p>
+                            <p class="card-text mb-0">Tanggal Mengaji: 13 September 2024</p>
                         </div>
                     </div>
 
                     <!-- Riwayat Mengajar 3 -->
-                    <div class="card mb-3">
+                    <div class="card shadow mb-2">
                         <div class="card-header">
                         Nama Santri:  Hasan bin Ali
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Surat: An-Nas</p>
-                            <p class="card-text">Ayat: 1-6</p>
-                            <p class="card-text">Jam Mengaji: 10:00 - 10:30</p>
-                            <p class="card-text">Tanggal Mengaji: 13 September 2024</p>
+                            <p class="card-text mb-0">Surat: An-Nas</p>
+                            <p class="card-text mb-0">Ayat: 1-6</p>
+                            <p class="card-text mb-0">Jam Mengaji: 10:00 - 10:30</p>
+                            <p class="card-text mb-0">Tanggal Mengaji: 13 September 2024</p>
                         </div>
                     </div>
 
                     <!-- Riwayat Mengajar 4 -->
-                    <div class="card mb-3">
+                    <div class="card shadow mb-2">
                         <div class="card-header">
                             Nama Santri:  Furqon
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Surat: Al-Ikhlas</p>
-                            <p class="card-text">Ayat: 1-4</p>
-                            <p class="card-text">Jam Mengaji: 11:00 - 11:30</p>
-                            <p class="card-text">Tanggal Mengaji: 13 September 2024</p>
+                            <p class="card-text mb-0">Surat: Al-Ikhlas</p>
+                            <p class="card-text mb-0">Ayat: 1-4</p>
+                            <p class="card-text mb-0">Jam Mengaji: 11:00 - 11:30</p>
+                            <p class="card-text mb-0">Tanggal Mengaji: 13 September 2024</p>
                         </div>
                     </div>
 
                     <!-- Riwayat Mengajar 5 -->
-                    <div class="card mb-3">
+                    <div class="card shadow mb-2">
                         <div class="card-header">
                          Nama Santri:  Della
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Surat: Al-Kawthar</p>
-                            <p class="card-text">Ayat: 1-3</p>
-                            <p class="card-text">Jam Mengaji: 12:00 - 12:30</p>
-                            <p class="card-text">Tanggal Mengaji: 13 September 2024</p>
+                            <p class="card-text mb-0">Surat: Al-Kawthar</p>
+                            <p class="card-text mb-0">Ayat: 1-3</p>
+                            <p class="card-text mb-0">Jam Mengaji: 12:00 - 12:30</p>
+                            <p class="card-text mb-0">Tanggal Mengaji: 13 September 2024</p>
                         </div>
                     </div>
-
-               
-
                 </div>
                 <div id="profile" class="content">
                     <div class="form-floating mb-2">
@@ -222,8 +219,11 @@
                         </textarea>
                         <label for="alamat">Alamat</label>
                     </div>
-                    <div class="d-grid">
+                    <div class="d-grid mb-2">
                         <button type="button" class="btn btn-outline-success">Edit</button>
+                    </div>
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-outline-danger">Logout</button>
                     </div>
                 </div>                
                 <div id="insentif" class="content">
