@@ -234,7 +234,7 @@
             </div>
         </a>
     </div>
-    <div class="offcanvas offcanvas-end bg-body-secondary" tabindex="-1" id="filter-search" aria-labelledby="filter-searchLabel" style="width:80%;">
+    <div class="offcanvas offcanvas-end bg-body-secondary" tabindex="-1" id="filter-search" aria-labelledby="filter-searchLabel" style="max-width:80%;">
       <div class="offcanvas-header border-bottom">
         <h5 class="offcanvas-title" id="filter-searchLabel">Filter Ustadz</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
