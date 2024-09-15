@@ -320,7 +320,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success">Pilih Ustadz</button>
+            <!-- <button type="button" class="btn btn-success">Pilih Ustadz</button> -->
+            <a href="https://modest-monster-greatly.ngrok-free.app/ngaji_geh.up/chat_ustadz.html?ustadz=Ust.+Abdul+Somad" type="button" class="btn btn-success">Pilih Ustadz</a>
           </div>
         </div>
       </div>

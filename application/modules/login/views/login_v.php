@@ -86,7 +86,7 @@
 				setTimeout(function() {
 					window.location.href = 'home';
 				}, 1000); // Delay 1 detik setelah alert sebelum ke loading
-			} else if(username === 'abdul_hamid' && password === '123456') {
+			} else if(username === 'fikrimaulana' && password === 'ngaji') {
                 // Tampilkan alert sukses
                 $('button[type="submit"]').attr("disabled",true);
                 $('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>'+

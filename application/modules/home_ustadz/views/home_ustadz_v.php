@@ -62,8 +62,8 @@
                         <img class="rounded-circle shadow" src="<?= base_url();?>assets/images/gambar1.jpg" width="100px" height="100px">
                     </div>
                     <div class="flex-grow-1 ms-2 p-2 bg-white rounded-4 shadow text-success">
-                        <center><strong>Abdul Hamid</strong></center>
-                        <span><i class="fas fa-id-badge fa-fw"></i> Ustadz/Ustadzah</span><br>
+                        <center><strong>Fikri Maulana</strong></center>
+                        <span><i class="fas fa-id-badge fa-fw"></i> Ustadz</span><br>
                         <span><i class="fas fa-mosque fa-fw"></i> Mesjid Jombang Kali</span><br>
                         <span><i class="fas fa-bookmark fa-fw"></i> Alquran/Tafsir/Hafidz</span><br>
                         <span><i class="fas fa-street-view fa-fw"></i> Santri Saat ini : 25</span>
@@ -128,7 +128,7 @@
                     <!-- Riwayat Mengajar 1 -->
                     <div class="card shadow mb-2">
                         <div class="card-header">
-                            Nama Santri: Samsul Firdaus
+                            Nama Santri: Muhammad Bani Husni
                         </div>
                         <div class="card-body">
                             <p class="card-text mb-0">Surat: Al-Fatihah</p>
@@ -192,7 +192,7 @@
                 </div>
                 <div id="profile" class="content">
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control shadow border-success" id="nama_lengkap" value="Abdul Hamid" placeholder="Nama Lengkap" readonly>
+                        <input type="text" class="form-control shadow border-success" id="nama_lengkap" value="Fikri Maulana" placeholder="Nama Lengkap" readonly>
                         <label for="nama_lengkap">Nama Lengkap</label>
                     </div>
                     <div class="form-floating mb-2">
@@ -230,16 +230,16 @@
                     <div class="card shadow bg-white rounded-4 border-success">
                         <div class="card-body">
                             <div class="mb-3">
-                                <div class="info-label">Nama Ustadz/Ustadzah:</div>
-                                <div class="info-value">Ustadz Ahmad Hamid</div>
+                                <div class="info-label">Nama Ustadz:</div>
+                                <div class="info-value"><strong>Fikri Maulana</strong></div>
                             </div>
                             <div class="mb-3">
                                 <div class="info-label">Jumlah Santri di Bulan Ini:</div>
-                                <div class="info-value">25 Santri</div>
+                                <div class="info-value"><strong>30 Santri</strong></div>
                             </div>
                             <div class="mb-3">
                                 <div class="info-label">Saldo Insentif:</div>
-                                <div class="info-value">Rp 1,250,000</div>
+                                <div class="info-value"><strong>Rp 1,250,000</strong></div>
                             </div>
                             <button class="btn btn-success w-100">Cairkan Insentif</button>
                         </div>
@@ -248,7 +248,7 @@
                 <div id="jadwal" class="content">
                     <!-- Header -->
                     <div class="header">
-                            Jadwal Mengajar Ustadz Ahmad
+                            Jadwal Mengajar Ustadz Fikri Maulana
                         </div>
 
                         <!-- Jadwal Mengajar -->

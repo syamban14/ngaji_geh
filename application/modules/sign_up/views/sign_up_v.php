@@ -62,7 +62,8 @@
 							<div class="row g-2">
 				                <div class="col">
 				                    <div class="d-grid">
-				                        <button type="button" class="btn btn-success">Submit</button>
+				                        <!-- <button type="button" class="btn btn-success">Submit</button> -->
+				                        <a href="https://modest-monster-greatly.ngrok-free.app/ngaji_geh.up/register.html" type="button" class="btn btn-success">Submit</a>
 				                    </div>
 				                </div>
 				                <div class="col">
