@@ -20,7 +20,7 @@
 					<img src="<?= base_url(); ?>assets/images/ustadz.png" alt="" height="150px">
 				</center>
 				<div class="card shadow-lg" style="border-radius: 10px; overflow: hidden;">
-					<div class="card-body" style="max-width: 400px; background-color: #e0f2f1;">
+					<div class="card-body" style="background-color: #e0f2f1;">
 
 						<!-- Form Login Modern -->
 						<form id="loginForm">
