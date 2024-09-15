@@ -10,6 +10,22 @@
 .border-success{
     border-color: #09AD74!important;
 }
+.btn-success {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #09AD74!important;
+    --bs-btn-border-color: #09AD74!important;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #157347;
+    --bs-btn-hover-border-color: #146c43;
+    --bs-btn-focus-shadow-rgb: 60, 153, 110;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #146c43;
+    --bs-btn-active-border-color: #13653f;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #09AD74!important;
+    --bs-btn-disabled-border-color: #09AD74!important;
+}
 .btn-outline-success {
     --bs-btn-color: #09AD74!important;
     --bs-btn-border-color: #09AD74!important;
@@ -60,6 +76,7 @@
     left: 0;
     width: 100%;
     background: #09AD74;
+    z-index: 9999;
 }
 .nav-bottom-wrapper .menu > .menu-item{
     text-decoration: none;
@@ -80,10 +97,25 @@ a.notify{
     color: white;
 }
 a.notify > i{
-    position: fixed;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    line-height: 1;
+}
+a.notify > span.notify-number{
+    position: absolute;
     right: 15px;
     top: 15px;
     line-height: 1;
+    font-size: .6rem;
+    padding: 2px;
+    background: red;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .icon-wrapper {
     width: 50px;
