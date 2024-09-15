@@ -11,49 +11,50 @@
 </head>
 
 <body class="bg-success">
+	<div class="container">
+		<div class="row d-flex align-items-center justify-content-center vh-100">
+			<div class="col-md-4">
+				<center>
+					<img src="<?= base_url(); ?>assets/images/logo.png" alt="" height="50px">
+					<p class="fw-bold text-white text-uppercase mb-0">Ngaji Geh</p>
+					<img src="<?= base_url(); ?>assets/images/ustadz.png" alt="" height="150px">
+				</center>
+				<div class="card shadow-lg" style="border-radius: 10px; overflow: hidden;">
+					<div class="card-body" style="max-width: 400px; background-color: #e0f2f1;">
 
-	<div class="mt-5">
-		<center>
-			<img src="<?= base_url(); ?>assets/images/logo.png" alt="" height="50px">
-			<p class="fw-bold text-white text-uppercase">Ngaji Geh</p>
-		</center>
-	</div>
-	<center><img src="<?= base_url(); ?>assets/images/ustadz.png" alt="" height="200px"></center>
-	<div class="container d-flex align-items-center justify-content-center vh-50">
-		<div class="card shadow-lg" style="border-radius: 10px; overflow: hidden;">
-			<div class="card-body" style="max-width: 400px; background-color: #e0f2f1;">
+						<!-- Form Login Modern -->
+						<form id="loginForm">
+							<div class="form-group mb-3 position-relative">
+								<label for="username" class="sr-only">Username</label>
+								<input type="text" class="form-control form-control-lg ps-5" id="username" placeholder="Username" style="border-radius: 10px;" required>
+								<i class="fas fa-user position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: #00796b;"></i>
+							</div>
 
-				<!-- Form Login Modern -->
-				<form id="loginForm">
-					<div class="form-group mb-3 position-relative">
-						<label for="username" class="sr-only">Username</label>
-						<input type="text" class="form-control form-control-lg ps-5" id="username" placeholder="Username" style="border-radius: 10px;" required>
-						<i class="fas fa-user position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: #00796b;"></i>
+							<div class="form-group mb-3 position-relative">
+								<label for="password" class="sr-only">Password</label>
+								<input type="password" class="form-control form-control-lg ps-5" id="password" placeholder="Password" style="border-radius: 10px;" required>
+								<i class="fas fa-lock position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: #00796b;"></i>
+							</div>
+
+							<div class="d-grid gap-2 mb-3">
+								<button type="submit" class="btn btn-success btn-lg" style="background-color: #09AD74; border-radius: 10px;">Login</button>
+							</div>
+						</form>
+
+						<p class="text-center mb-3" style="color: #004d40;">Atau login dengan</p>
+
+						<div class="d-grid gap-2 mb-3">
+							<a href="#" class="btn btn-danger btn-lg btn-block" style="border-radius: 10px;">
+								<i class="fab fa-google mr-2"></i> Google
+							</a>
+						</div>
+
+						<hr>
+
+						<div class="text-center">
+							<p class="text-muted mb-0" style="color: #004d40;">Belum punya akun? <a href="<?= base_url('sign_up');?>" style="color: #00796b;">Daftar di sini</a></p>
+						</div>
 					</div>
-
-					<div class="form-group mb-3 position-relative">
-						<label for="password" class="sr-only">Password</label>
-						<input type="password" class="form-control form-control-lg ps-5" id="password" placeholder="Password" style="border-radius: 10px;" required>
-						<i class="fas fa-lock position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: #00796b;"></i>
-					</div>
-
-					<div class="d-grid gap-2 mb-3">
-						<button type="submit" class="btn btn-success btn-lg" style="background-color: #09AD74; border-radius: 10px;">Login</button>
-					</div>
-				</form>
-
-				<p class="text-center mb-3" style="color: #004d40;">Atau login dengan</p>
-
-				<div class="d-grid gap-2 mb-3">
-					<a href="#" class="btn btn-danger btn-lg btn-block" style="border-radius: 10px;">
-						<i class="fab fa-google mr-2"></i> Google
-					</a>
-				</div>
-
-				<hr>
-
-				<div class="text-center">
-					<p class="text-muted mb-0" style="color: #004d40;">Belum punya akun? <a href="#" style="color: #00796b;">Daftar di sini</a></p>
 				</div>
 			</div>
 		</div>
