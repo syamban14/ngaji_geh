@@ -76,7 +76,7 @@
     left: 0;
     width: 100%;
     background: #09AD74;
-    z-index: 9999;
+    z-index: 1030;
 }
 .nav-bottom-wrapper .menu > .menu-item{
     text-decoration: none;

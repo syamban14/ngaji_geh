@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<style type="text/css">
 		.content {
 			display: none;
@@ -30,22 +31,55 @@
             font-size: 1.5rem;
             font-weight: bold;
         }
+        /* Style untuk preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #09AD74;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Style untuk konten utama */
+        #content-wrapper, #nav-bottom-wrapper {
+            display: none;
+        }
 	</style>
 </head>
 
 <body class="bg-light">
-	<div class="content-wrapper">
+	<div id="preloader">
+		<div class="text-center">
+			<img class="animate__animated animate__bounceIn" src="<?= base_url();?>assets/images/robinsar-fajar.png" alt="" height="100px">
+			<p class="mb-0">
+				<div class="spinner-border spinner-border-sm text-light" role="status">
+	              <span class="visually-hidden">Loading...</span>
+	            </div>
+	        	Memuat...
+	        </p>
+		</div>
+	</div>
+	<div class="content-wrapper" id="content-wrapper">
 		<div class="contents">
-			<div class="hero bg-success p-3">
+			<div class="hero bg-success p-3 overflow-hidden">
 				<a class="notify" href="#">
 					<i class="bi bi-bell-fill fs-4"></i>
-					<span class="notify-number">9+</span>
+					<!-- kalo ada notif fetch datanya dari sini ya, bukan dari dalem elemen span nya -->
+					<span class="notify-number" id="notify-number">9+</span>
+					<!-- sampe sini -->
 				</a>
 				<center>
 					<img src="<?= base_url(); ?>assets/images/logo.png" alt="" height="50px">
 					<p class="fw-bold text-white text-uppercase">Ngaji Geh</p>
 				</center>
-				<div class="d-flex align-items-center">
+				<div class="d-flex align-items-center animate__animated animate__fadeInUp animate__faster">
 					<div class="flex-shrink-0">
 						<img class="rounded-circle shadow" src="<?= base_url(); ?>assets/images/gambar1.jpg" width="100px" height="100px">
 					</div>
@@ -58,7 +92,7 @@
 				</div>
 			</div>
 			<div class="position-relative">
-				<div id="beranda" class="content active">
+				<div id="beranda" class="content active animate__animated animate__fadeInUp animate__faster">
 					<div class="card shadow bg-white rounded-4 border-success">
 						<div class="card-body">
 							<div class="row g-3">
@@ -106,11 +140,11 @@
 						</div>
 					</div>
 				</div>
-				<div id="artikel" class="content">
+				<div id="artikel" class="content animate__animated animate__fadeInUp animate__faster">
 					<h1>Artikel</h1>
 					<p>Ini adalah halaman Artikel.</p>
 				</div>
-				<div id="riwayat" class="content">
+				<div id="riwayat" class="content animate__animated animate__fadeInUp animate__faster">
 					<h2 class="text-center mb-4">Riwayat Hari Ini</h2>
                     <div class="card shadow mb-2">
                         <div class="card-header">
@@ -124,7 +158,7 @@
                         </div>
                     </div>
 				</div>
-				<div id="profile" class="content">
+				<div id="profile" class="content animate__animated animate__fadeInUp animate__faster">
 					<div class="form-floating mb-2">
 						<input type="text" class="form-control shadow border-success" id="nama_lengkap" value="Muhammad Bani Husni" placeholder="Nama Lengkap" readonly>
 						<label for="nama_lengkap">Nama Lengkap</label>
@@ -159,9 +193,9 @@ Banten, Indonesia - 42436
 			</div>
 		</div>
 	</div>
-	<div class="nav-bottom-wrapper shadow-lg">
+	<div class="nav-bottom-wrapper shadow-lg" id="nav-bottom-wrapper">
 		<div class="container-fluid px-0">
-			<div class="row g-0 text-center p-1 menu">
+			<div class="row g-0 text-center p-1 menu animate__animated animate__slideInUp animate__faster">
 				<a href="#" id="beranda-tab" class="col menu-item active" onclick="showContent('beranda')"><i class="bi bi-house fs-4"></i><br>Beranda</a>
 				<a href="#" id="artikel-tab" class="col menu-item" onclick="showContent('artikel')"><i class="bi bi-calendar-event fs-4"></i><br>Artikel</a>
 				<a href="#" id="riwayat-tab" class="col menu-item" onclick="showContent('riwayat')"><i class="bi bi-clock-history fs-4"></i><br>Riwayat</a>
@@ -169,10 +203,22 @@ Banten, Indonesia - 42436
 			</div>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+	<script src="<?= base_url('assets/js/wow.min.js');?>"></script>
 	<script>
+		window.addEventListener('load', function() {
+            setTimeout(function() {
+                $('#preloader').fadeOut('fast');
+                document.getElementById('content-wrapper').style.display = 'block';
+                document.getElementById('nav-bottom-wrapper').style.display = 'block';
+            }, 1500);
+        });
+        if ($('#notify-number').text()!=='') {
+        	$('a.notify > i').addClass('animate__animated animate__tada animate__infinite');
+        }
 		function showContent(tab) {
 			document.querySelector('.content.active').classList.remove('active');
 			document.getElementById(tab).classList.add('active');
