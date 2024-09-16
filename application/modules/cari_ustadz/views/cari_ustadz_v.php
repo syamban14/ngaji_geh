@@ -319,14 +319,11 @@
                 <iframe width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
-          <div class="modal-footer">
-            <!-- <button type="button" class="btn btn-success">Pilih Ustadz</button> -->
-            <a href="https://modest-monster-greatly.ngrok-free.app/ngaji_geh.up/chat_ustadz.html?ustadz=Ust.+Abdul+Somad" type="button" class="btn btn-success">Pilih Ustadz</a>
-          </div>
+          <div class="modal-footer" id="btnPilihUstadz"></div>
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script>
@@ -385,6 +382,7 @@
             $('#fotoUstadz').html('<img class="rounded-circle" id="fotoUstadz" src="<?= base_url();?>assets/images/'+fotoUstadz+'" alt="..." width="100px" height="100px">')
             $('#starUstadz').html('('+starUstadz+')'+rating)
             $('#mapUstadz').html('<iframe src="'+mapUstadz+'" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>')
+            $('#btnPilihUstadz').html('<a href="<?= base_url();?>booking_ustadz?ustadz='+namaUstadz+'" class="btn btn-success">Pilih Ustadz</a>')
           })
         }
     </script>

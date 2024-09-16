@@ -89,19 +89,6 @@
                 </div>
             </div>
         </div>
-
-
-    </div>
-
-    <div class="nav-bottom-wrapper shadow-lg">
-        <div class="container-fluid px-0">
-            <div class="row g-0 text-center p-1 menu">
-                <a href="home_ustadz" id="beranda-tab" class="col menu-item active" onclick="showContent('beranda')"><i class="bi bi-house fs-4"></i><br>Beranda</a>
-                <a href="#" id="Artikel-tab" class="col menu-item" onclick="showContent('Artikel')"><i class="bi bi-calendar-event fs-4"></i><br>Artikel</a>
-                <a href="#" id="riwayat-tab" class="col menu-item" onclick="showContent('riwayat')"><i class="bi bi-clock-history fs-4"></i><br>Riwayat</a>
-                <a href="#" id="profile-tab" class="col menu-item" onclick="showContent('profile')"><i class="bi bi-person fs-4"></i><br>Profil</a>
-            </div>
-        </div>
     </div>
     <!-- Paginasi -->
     <div class="container mt-4">

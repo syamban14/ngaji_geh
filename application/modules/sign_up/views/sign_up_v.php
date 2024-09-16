@@ -62,8 +62,8 @@
 							<div class="row g-2">
 				                <div class="col">
 				                    <div class="d-grid">
-				                        <!-- <button type="button" class="btn btn-success">Submit</button> -->
-				                        <a href="https://modest-monster-greatly.ngrok-free.app/ngaji_geh.up/register.html" type="button" class="btn btn-success">Submit</a>
+				                        <button type="submit" class="btn btn-success">Submit</button>
+				                        <!-- <a href="https://modest-monster-greatly.ngrok-free.app/ngaji_geh.up/register.html" type="button" class="btn btn-success">Submit</a> -->
 				                    </div>
 				                </div>
 				                <div class="col">
@@ -86,44 +86,18 @@
 
 	<!-- Script untuk menangani login, alert sukses, dan redirect ke loading page -->
 	<script>
-		document.getElementById('loginForm').addEventListener('submit', function(event) {
+		document.getElementById('signupForm').addEventListener('submit', function(event) {
 			event.preventDefault(); // Mencegah form dikirim secara default
-
-			// Ambil nilai dari input username dan password
-			var username = document.getElementById('username').value;
-			var password = document.getElementById('password').value;
-
-			// Logika sederhana untuk validasi
-			if (username === 'ngaji' && password === 'ngajigeh') {
-				// Tampilkan alert sukses
-				$('button[type="submit"]').attr("disabled", true);
-				$('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>' +
-					'<span role="status"> Loading...</span>');
-				// alert('Login berhasil! Anda akan diarahkan ke halaman utama.');
-
-				// Redirect ke halaman loading setelah alert
-				setTimeout(function() {
-					window.location.href = 'home';
-				}, 1000); // Delay 1 detik setelah alert sebelum ke loading
-			} else if(username === 'abdul_hamid' && password === '123456') {
-                // Tampilkan alert sukses
-                $('button[type="submit"]').attr("disabled",true);
-                $('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>'+
-                                                '<span role="status"> Loading...</span>');
-                // alert('Login berhasil! Anda akan diarahkan ke halaman utama.');
-
-                // Redirect ke halaman loading setelah alert
-                setTimeout(function() {
-                    window.location.href = 'home_ustadz';
-                }, 1000);  // Delay 1 detik setelah alert sebelum ke loading
-			} else {
-				// Tampilkan alert jika login gagal
-				Swal.fire({
-					title: "Gagal!",
-					text: "Username dan Password tidak sesuai",
-					icon: "error"
-				});
-			}
+			Swal.fire({
+				title: "Sukses!",
+				text: "Anda berhasil mendaftarkan diri",
+				icon: "success",
+				showConfirmButton: false,
+  				timer: 2000
+			});
+			setTimeout(function() {
+				window.location.href = 'login';
+			}, 2000);
 		});
 	</script>
 </body>
