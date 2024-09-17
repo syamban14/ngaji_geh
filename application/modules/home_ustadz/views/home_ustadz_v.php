@@ -253,6 +253,15 @@ Banten, Indonesia - 42436
                         </textarea>
                         <label for="alamat">Alamat</label>
                     </div>
+                    <div class="form-floating mb-2 position-relative">
+                        <input type="file" class="form-control shadow border-success" id="sertifikat" placeholder="Sertifikat Guru Alquran">
+                        <label for="sertifikat">Sertifikat Guru Alquran</label>
+                        
+                        <!-- Tampilan file yang diunggah (hanya tampilan, bukan value sebenarnya) -->
+                        <div class="uploaded-file bg-light p-2 border border-success rounded mt-2">
+                            <i class="fas fa-file-pdf"></i> sertifikat_guru_mengaji_UMMI.pdf
+                        </div>
+                    </div>
                     <div class="d-grid mb-2">
                         <button type="button" class="btn btn-outline-success">Edit</button>
                     </div>
@@ -378,6 +387,10 @@ Banten, Indonesia - 42436
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script>
+        document.getElementById('sertifikat').addEventListener('change', function() {
+            var fileName = this.files[0].name;
+            document.querySelector('.uploaded-file').textContent = fileName;
+        });
         window.addEventListener('load', function() {
             setTimeout(function() {
                 $('#preloader').fadeOut('fast');
