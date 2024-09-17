@@ -92,7 +92,6 @@
                 $('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>'+
                                                 '<span role="status"> Loading...</span>');
                 // alert('Login berhasil! Anda akan diarahkan ke halaman utama.');
-
                 // Redirect ke halaman loading setelah alert
                 setTimeout(function() {
                     window.location.href = 'home_ustadz';
