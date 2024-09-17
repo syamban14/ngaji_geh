@@ -25,6 +25,7 @@
 							  <select class="form-select" id="role" name="role" aria-label="role">
 							    <option value="1">Ustadz/Ustadzah</option>
 							    <option value="2">Santri</option>
+							    <option value="3">Orangtua</option>
 							  </select>
 							  <label for="role">Sebagai</label>
 							</div>

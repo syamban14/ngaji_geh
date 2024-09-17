@@ -105,7 +105,7 @@
 									</a>
 								</div>
 								<div class="col-4 text-center">
-									<a href="#" class="feature-menu">
+                                    <a href="#mesjid" data-bs-toggle="modal" class="feature-menu">
 										<div class="icon-wrapper mx-auto">
 											<i class="fas fa-mosque"></i>
 										</div>
@@ -121,7 +121,7 @@
 									</a>
 								</div>
 								<div class="col-4 text-center">
-									<a href="#" class="feature-menu">
+                                    <a href="#jadwal" data-bs-toggle="modal" class="feature-menu">
 										<div class="icon-wrapper mx-auto">
 											<i class="bi bi-calendar-week"></i>
 										</div>
@@ -193,6 +193,52 @@ Banten, Indonesia - 42436
 			</div>
 		</div>
 	</div>
+	
+    <div class="modal fade" id="jadwal" tabindex="-1" aria-labelledby="jadwalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="jadwalLabel">Jadwal Mengajar</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Jadwal 1 -->
+            <div class="card mb-2">
+                <div class="card-body p-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="student-name">Ustadz Fikri Maulana</div>
+                            <div class="schedule-date"><i class="far fa-calendar-check"></i> 13 September 2024</div>
+                        </div>
+                        <div class="schedule-time"><i class="far fa-clock"></i> 08:00 - 08:30</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div class="modal fade" id="mesjid" tabindex="-1" aria-labelledby="mesjidLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="jadwalLabel">Daftar Masjid</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d49207.35279659961!2d106.0216166623499!3d-6.00353089156085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smasjid%20cilegon!5e1!3m2!1sen!2sid!4v1726542852582!5m2!1sen!2sid" 
+							width="100%" 
+							height="600" 
+							style="border:0;" 
+							allowfullscreen="" 
+							loading="lazy" 
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="nav-bottom-wrapper shadow-lg" id="nav-bottom-wrapper">
 		<div class="container-fluid px-0">
 			<div class="row g-0 text-center p-1 menu animate__animated animate__slideInUp animate__faster">
