@@ -126,16 +126,27 @@
 			margin: 10px 0;
 			text-align: center;
 		}
+
+		button {
+			padding: 10px 20px;
+			font-size: 16px;
+			margin: 25px;
+		}
 	</style>
 </head>
 
 <body>
 	<div class="session-container">
 		<div class="session-header">
-			<h2>Sesi Ngaji Dimulai</h2>
+			<h2>Mulai Mengaji</h2>
 		</div>
+		<!-- <script src="app.js"></script> -->
+
 		<div class="session-content">
 			<p>Sesi pembelajaran ngaji dengan Ustadz telah dimulai. Anda dapat mulai belajar sesuai dengan topik yang telah disepakati.</p>
+			<button id="startRecord" class="btn btn-success">Mulai</button>
+			<button id="stopRecord" class="btn btn-warning" disabled>Berhenti</button>
+			<audio id="audioPlayback" controls></audio>
 			<!-- Timer -->
 			<div class="timer" id="timer">00:00:00</div>
 		</div>
@@ -258,6 +269,65 @@
 
 		// Start the timer when the page loads
 		window.onload = startTimer;
+	</script>
+
+	<!-- Script untuk merekam audio -->
+	<script>
+		let mediaRecorder;
+		let audioChunks = [];
+
+		const startRecordButton = document.getElementById('startRecord');
+		const stopRecordButton = document.getElementById('stopRecord');
+		const audioPlayback = document.getElementById('audioPlayback');
+
+		navigator.mediaDevices.getUserMedia({
+				audio: true
+			})
+			.then(stream => {
+				mediaRecorder = new MediaRecorder(stream);
+
+				mediaRecorder.ondataavailable = function(event) {
+					audioChunks.push(event.data);
+				};
+
+				mediaRecorder.onstop = function() {
+					const audioBlob = new Blob(audioChunks, {
+						type: 'audio/wav'
+					});
+					const audioUrl = URL.createObjectURL(audioBlob);
+					audioPlayback.src = audioUrl;
+					audioChunks = [];
+
+					// Mengirimkan data ke server PHP
+					const formData = new FormData();
+					formData.append('audio', audioBlob, 'rekaman.wav');
+
+					fetch('save.php', {
+							method: 'POST',
+							body: formData
+						})
+						.then(response => response.text())
+						.then(data => {
+							console.log(data);
+						})
+						.catch(error => {
+							console.error('Error:', error);
+						});
+				};
+
+				startRecordButton.addEventListener('click', () => {
+					mediaRecorder.start();
+					startRecordButton.disabled = true;
+					stopRecordButton.disabled = false;
+				});
+
+				stopRecordButton.addEventListener('click', () => {
+					mediaRecorder.stop();
+					startRecordButton.disabled = false;
+					stopRecordButton.disabled = true;
+				});
+			})
+			.catch(error => console.error('getUserMedia error:', error));
 	</script>
 
 </body>

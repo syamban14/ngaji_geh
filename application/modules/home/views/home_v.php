@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,8 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-	<link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<style type="text/css">
 		.content {
 			display: none;
@@ -18,52 +19,55 @@
 		.content.active {
 			display: block;
 		}
-        .card-header {
-            background-color: #09AD74;
-            color: white;
-        }
 
-        .header {
-            background-color: #09AD74;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        /* Style untuk preloader */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #09AD74;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            font-family: Arial, sans-serif;
-            color: white;
-        }
+		.card-header {
+			background-color: #09AD74;
+			color: white;
+		}
 
-        /* Style untuk konten utama */
-        #content-wrapper, #nav-bottom-wrapper {
-            display: none;
-        }
+		.header {
+			background-color: #09AD74;
+			color: white;
+			padding: 15px;
+			text-align: center;
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+
+		/* Style untuk preloader */
+		#preloader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #09AD74;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 9999;
+			font-family: Arial, sans-serif;
+			color: white;
+		}
+
+		/* Style untuk konten utama */
+		#content-wrapper,
+		#nav-bottom-wrapper {
+			display: none;
+		}
 	</style>
 </head>
 
 <body class="bg-light">
 	<div id="preloader">
 		<div class="text-center">
-			<img class="animate__animated animate__bounceIn" src="<?= base_url();?>assets/images/robinsar-fajar.png" alt="" height="100px">
+			<img class="animate__animated animate__bounceIn" src="<?= base_url(); ?>assets/images/robinsar-fajar.png" alt="" height="100px">
 			<p class="mb-0">
-				<div class="spinner-border spinner-border-sm text-light" role="status">
-	              <span class="visually-hidden">Loading...</span>
-	            </div>
-	        	Memuat...
-	        </p>
+			<div class="spinner-border spinner-border-sm text-light" role="status">
+				<span class="visually-hidden">Loading...</span>
+			</div>
+			Memuat...
+			</p>
 		</div>
 	</div>
 	<div class="content-wrapper" id="content-wrapper">
@@ -105,7 +109,7 @@
 									</a>
 								</div>
 								<div class="col-4 text-center">
-                                    <a href="#mesjid" data-bs-toggle="modal" class="feature-menu">
+									<a href="#mesjid" data-bs-toggle="modal" class="feature-menu">
 										<div class="icon-wrapper mx-auto">
 											<i class="fas fa-mosque"></i>
 										</div>
@@ -113,7 +117,7 @@
 									</a>
 								</div>
 								<div class="col-4 text-center">
-									<a href="#" class="feature-menu">
+									<a href="<?= base_url('mengaji') ?>" class="feature-menu">
 										<div class="icon-wrapper mx-auto">
 											<i class="bi bi-book"></i>
 										</div>
@@ -121,7 +125,7 @@
 									</a>
 								</div>
 								<div class="col-4 text-center">
-                                    <a href="#jadwal" data-bs-toggle="modal" class="feature-menu">
+									<a href="#jadwal" data-bs-toggle="modal" class="feature-menu">
 										<div class="icon-wrapper mx-auto">
 											<i class="bi bi-calendar-week"></i>
 										</div>
@@ -146,17 +150,17 @@
 				</div>
 				<div id="riwayat" class="content animate__animated animate__fadeInUp animate__faster">
 					<h2 class="text-center mb-4">Riwayat Hari Ini</h2>
-                    <div class="card shadow mb-2">
-                        <div class="card-header">
-                            Ngaji bersama Ust. Abdul Somad Al-Riawi
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text mb-0">Surat: Al-Baqoroh</p>
-                            <p class="card-text mb-0">Ayat: 1-31</p>
-                            <p class="card-text mb-0">Jam Mengaji: 08:00 - 08:30</p>
-                            <p class="card-text mb-0">Tanggal Mengaji: 13 September 2024</p>
-                        </div>
-                    </div>
+					<div class="card shadow mb-2">
+						<div class="card-header">
+							Ngaji bersama Ust. Abdul Somad Al-Riawi
+						</div>
+						<div class="card-body">
+							<p class="card-text mb-0">Surat: Al-Baqoroh</p>
+							<p class="card-text mb-0">Ayat: 1-31</p>
+							<p class="card-text mb-0">Jam Mengaji: 08:00 - 08:30</p>
+							<p class="card-text mb-0">Tanggal Mengaji: 13 September 2024</p>
+						</div>
+					</div>
 				</div>
 				<div id="profile" class="content animate__animated animate__fadeInUp animate__faster">
 					<div class="form-floating mb-2">
@@ -186,39 +190,39 @@ Banten, Indonesia - 42436
 					<div class="d-grid mb-2">
 						<button type="button" class="btn btn-outline-success">Edit</button>
 					</div>
-                    <div class="d-grid">
-                        <button type="button" class="btn btn-outline-danger">Logout</button>
-                    </div>
+					<div class="d-grid">
+						<button type="button" class="btn btn-outline-danger">Logout</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-    <div class="modal fade" id="jadwal" tabindex="-1" aria-labelledby="jadwalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="jadwalLabel">Jadwal Mengajar</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Jadwal 1 -->
-            <div class="card mb-2">
-                <div class="card-body p-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <div class="student-name">Ustadz Fikri Maulana</div>
-                            <div class="schedule-date"><i class="far fa-calendar-check"></i> 13 September 2024</div>
-                        </div>
-                        <div class="schedule-time"><i class="far fa-clock"></i> 08:00 - 08:30</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-	
+
+	<div class="modal fade" id="jadwal" tabindex="-1" aria-labelledby="jadwalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="jadwalLabel">Jadwal Mengajar</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<!-- Jadwal 1 -->
+					<div class="card mb-2">
+						<div class="card-body p-2">
+							<div class="d-flex justify-content-between align-items-center">
+								<div>
+									<div class="student-name">Ustadz Fikri Maulana</div>
+									<div class="schedule-date"><i class="far fa-calendar-check"></i> 13 September 2024</div>
+								</div>
+								<div class="schedule-time"><i class="far fa-clock"></i> 08:00 - 08:30</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="modal fade" id="mesjid" tabindex="-1" aria-labelledby="mesjidLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
@@ -227,13 +231,13 @@ Banten, Indonesia - 42436
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d49207.35279659961!2d106.0216166623499!3d-6.00353089156085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smasjid%20cilegon!5e1!3m2!1sen!2sid!4v1726542852582!5m2!1sen!2sid" 
-							width="100%" 
-							height="600" 
-							style="border:0;" 
-							allowfullscreen="" 
-							loading="lazy" 
-							referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d49207.35279659961!2d106.0216166623499!3d-6.00353089156085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smasjid%20cilegon!5e1!3m2!1sen!2sid!4v1726542852582!5m2!1sen!2sid"
+						width="100%"
+						height="600"
+						style="border:0;"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</div>
 		</div>
@@ -253,18 +257,19 @@ Banten, Indonesia - 42436
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-	<script src="<?= base_url('assets/js/wow.min.js');?>"></script>
+	<script src="<?= base_url('assets/js/wow.min.js'); ?>"></script>
 	<script>
 		window.addEventListener('load', function() {
-            setTimeout(function() {
-                $('#preloader').fadeOut('fast');
-                document.getElementById('content-wrapper').style.display = 'block';
-                document.getElementById('nav-bottom-wrapper').style.display = 'block';
-            }, 1500);
-        });
-        if ($('#notify-number').text()!=='') {
-        	$('a.notify > i').addClass('animate__animated animate__tada animate__infinite');
-        }
+			setTimeout(function() {
+				$('#preloader').fadeOut('fast');
+				document.getElementById('content-wrapper').style.display = 'block';
+				document.getElementById('nav-bottom-wrapper').style.display = 'block';
+			}, 1500);
+		});
+		if ($('#notify-number').text() !== '') {
+			$('a.notify > i').addClass('animate__animated animate__tada animate__infinite');
+		}
+
 		function showContent(tab) {
 			document.querySelector('.content.active').classList.remove('active');
 			document.getElementById(tab).classList.add('active');

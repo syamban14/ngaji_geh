@@ -183,7 +183,7 @@
 
                 // Simulasikan balasan dari ustadz
                 setTimeout(() => {
-                    appendMessage('Ustadz', 'Silakan pilih salah satu opsi berikut:', true);
+                    appendMessage('Ustadz', 'Waalaikumsalam, Silakan pilih salah satu opsi berikut:', true);
                 }, 1000);
             }
         }
