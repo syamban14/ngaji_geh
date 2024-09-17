@@ -25,7 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $alamat = "http://".$_SERVER['HTTP_HOST'];
 $alamat = $alamat.str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
-$config['base_url']    = $alamat;//"http://localhost/invoice";
+// $config['base_url']    = $alamat; //"http://localhost/invoice";
+$config['base_url'] = getenv('APP_URL');
+
 
 /*
 |--------------------------------------------------------------------------
