@@ -336,10 +336,6 @@
 					stopRecordButton.disabled = true;
 					endSessionButton.disabled = false;
 				});
-
-				endSessionButton.addEventListener('click', () => {
-					mediaRecorders.stop();
-				});
 			})
 			.catch(error => console.error('getUserMedia error:', error));
 	</script>
