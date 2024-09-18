@@ -25,7 +25,7 @@
 						<!-- Form Login Modern -->
 						<form id="loginForm">
 							<div class="form-group mb-3 position-relative">
-								<label for="username" class="sr-only">Usernamenya</label>
+								<label for="username" class="sr-only">Username</label>
 								<input type="text" class="form-control form-control-lg ps-5" id="username" placeholder="Username" style="border-radius: 10px;" required>
 								<i class="fas fa-user position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: #00796b;"></i>
 							</div>
