@@ -145,8 +145,8 @@
 		<div class="session-content">
 			<p>Sesi pembelajaran ngaji dengan Ustadz telah dimulai. Anda dapat mulai belajar sesuai dengan topik yang telah disepakati.</p>
 			<center>
-				<button id="startRecord" class="btn btn-success">Mulai</button>
-				<button id="stopRecord" class="btn btn-warning" disabled>Berhenti</button>
+				<button id="startRecord" class="btn btn-success" onclick="startTimer()">Mulai</button>
+				<button id="stopRecord" class="btn btn-warning" onclick="stopTimer()" disabled>Berhenti</button>
 			</center>
 			<audio id="audioPlayback" controls></audio>
 			<!-- Timer -->
@@ -234,7 +234,12 @@
 		let hours = 0;
 
 		function startTimer() {
+			seconds = 0;
 			timer = setInterval(updateTimer, 1000);
+		}
+
+		function stopTimer() {
+			clearInterval(timer); // Menghentikan timer
 		}
 
 		function updateTimer() {
@@ -270,7 +275,7 @@
 		}
 
 		// Start the timer when the page loads
-		window.onload = startTimer;
+		// window.onload = startTimer;
 	</script>
 
 	<!-- Script untuk merekam audio -->
