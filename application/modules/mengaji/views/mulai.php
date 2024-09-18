@@ -144,8 +144,10 @@
 
 		<div class="session-content">
 			<p>Sesi pembelajaran ngaji dengan Ustadz telah dimulai. Anda dapat mulai belajar sesuai dengan topik yang telah disepakati.</p>
-			<button id="startRecord" class="btn btn-success">Mulai</button>
-			<button id="stopRecord" class="btn btn-warning" disabled>Berhenti</button>
+			<center>
+				<button id="startRecord" class="btn btn-success">Mulai</button>
+				<button id="stopRecord" class="btn btn-warning" disabled>Berhenti</button>
+			</center>
 			<audio id="audioPlayback" controls></audio>
 			<!-- Timer -->
 			<div class="timer" id="timer">00:00:00</div>
