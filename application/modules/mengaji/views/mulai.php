@@ -153,7 +153,7 @@
 			<div class="timer" id="timer">00:00:00</div>
 		</div>
 		<div class="end-session">
-			<button onclick="confirmEndSession()">Akhiri Sesi</button>
+			<button id="endSessionButton" class="btn btn-danger" onclick="confirmEndSession()">Akhiri Sesi</button>
 		</div>
 	</div>
 
@@ -286,6 +286,7 @@
 		const startRecordButton = document.getElementById('startRecord');
 		const stopRecordButton = document.getElementById('stopRecord');
 		const audioPlayback = document.getElementById('audioPlayback');
+		const endSessionButton = document.getElementById('endSessionButton');
 
 		navigator.mediaDevices.getUserMedia({
 				audio: true
@@ -309,7 +310,7 @@
 					const formData = new FormData();
 					formData.append('audio', audioBlob, 'rekaman.wav');
 
-					fetch('save.php', {
+					fetch('application/modules/mengaji/views/save.php', {
 							method: 'POST',
 							body: formData
 						})
@@ -326,12 +327,18 @@
 					mediaRecorder.start();
 					startRecordButton.disabled = true;
 					stopRecordButton.disabled = false;
+					// endSessionButton.disabled = true;
 				});
 
 				stopRecordButton.addEventListener('click', () => {
 					mediaRecorder.stop();
 					startRecordButton.disabled = false;
 					stopRecordButton.disabled = true;
+					endSessionButton.disabled = false;
+				});
+
+				endSessionButton.addEventListener('click', () => {
+					mediaRecorders.stop();
 				});
 			})
 			.catch(error => console.error('getUserMedia error:', error));
