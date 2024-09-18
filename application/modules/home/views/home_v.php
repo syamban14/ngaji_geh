@@ -55,6 +55,77 @@
 		#nav-bottom-wrapper {
 			display: none;
 		}
+
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .article {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .article img {
+            width: 100%;
+            height: auto;
+        }
+
+        .article-content {
+            padding: 15px;
+        }
+
+        .article-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+
+        .article-author {
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        .article-link {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        /* Mobile responsive */
+        @media(min-width: 768px) {
+            .article {
+                flex-direction: row;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .article img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+
+            .article-content {
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .article-title {
+                font-size: 20px;
+            }
+
+            .article-author {
+                font-size: 16px;
+            }
+        }
 	</style>
 </head>
 
@@ -145,8 +216,37 @@
 					</div>
 				</div>
 				<div id="artikel" class="content animate__animated animate__fadeInUp animate__faster">
-					<h1>Artikel</h1>
-					<p>Ini adalah halaman Artikel.</p>
+					<h1>Artikel</h1>					
+                    <div class="article-list">
+                        <?php
+                            // URL API
+                            $apiUrl = 'https://artikel-islam.netlify.app/.netlify/functions/api/fir';
+
+                            // Mendapatkan data dari API
+                            $apiResponse = file_get_contents($apiUrl);
+
+                            // Mengubah JSON menjadi array PHP
+                            $data = json_decode($apiResponse, true);
+                            // echo $data;
+                            $data2=substr($apiResponse, 113);
+                            $lastchar = substr($data2,0, -2);
+                            $result = json_decode($lastchar, true);
+                                                        
+                            foreach ($result as $e) {	
+                        ?>
+                            <div class="article">
+                                <img src="<?php echo $e['thumbnail']; ?>" alt="Article Thumbnail">
+                                <div class="article-content">
+                                    <a href="<?php echo $e['url']; ?>" class="article-link" target="_blank">
+                                        <h2 class="article-title"><?php echo $e['title']; ?></h2>
+                                    </a>
+                                    <p class="article-author">Author: <?php echo $e['author']; ?> - <i><?php echo $e['date']; ?></i></p>
+                                </div>
+                            </div>
+                        <?php
+                            }
+                        ?>
+                    </div>
 				</div>
 				<div id="riwayat" class="content animate__animated animate__fadeInUp animate__faster">
 					<h2 class="text-center mb-4">Riwayat Hari Ini</h2>
