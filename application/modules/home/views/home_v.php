@@ -168,7 +168,7 @@
 						<label for="nama_lengkap">Nama Lengkap</label>
 					</div>
 					<div class="form-floating mb-2">
-						<input type="text" class="form-control shadow border-success" id="tgl" value="20 Juli 1993" placeholder="Tanggal Lahir" readonly>
+						<input type="date" class="form-control shadow border-success" id="tgl" value="20/07/1993" placeholder="Tanggal Lahir" readonly>
 						<label for="tgl">Tanggal Lahir</label>
 					</div>
 					<div class="form-floating mb-2">
@@ -188,16 +188,32 @@ Banten, Indonesia - 42436
 						<label for="alamat">Alamat</label>
 					</div>
 					<div class="d-grid mb-2">
-						<button type="button" class="btn btn-outline-success">Edit</button>
+						<button 
+							type="button"
+							class="btn btn-outline-success"
+							data-bs-toggle="modal"
+							data-bs-target="#modalProfil">Edit</button>
 					</div>
 					<div class="d-grid">
-						<button type="button" class="btn btn-outline-danger">Logout</button>
+						<button type="button" class="btn btn-outline-danger" id="btn-logout">Logout</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+
+	<div class="nav-bottom-wrapper shadow-lg" id="nav-bottom-wrapper">
+		<div class="container-fluid px-0">
+			<div class="row g-0 text-center p-1 menu animate__animated animate__slideInUp animate__faster">
+				<a href="#" id="beranda-tab" class="col menu-item active" onclick="showContent('beranda')"><i class="bi bi-house fs-4"></i><br>Beranda</a>
+				<a href="#" id="artikel-tab" class="col menu-item" onclick="showContent('artikel')"><i class="bi bi-calendar-event fs-4"></i><br>Artikel</a>
+				<a href="#" id="riwayat-tab" class="col menu-item" onclick="showContent('riwayat')"><i class="bi bi-clock-history fs-4"></i><br>Riwayat</a>
+				<a href="#" id="profile-tab" class="col menu-item" onclick="showContent('profile')"><i class="bi bi-person fs-4"></i><br>Profil</a>
+			</div>
+		</div>
+	</div>
+	
 	<div class="modal fade" id="jadwal" tabindex="-1" aria-labelledby="jadwalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -222,7 +238,6 @@ Banten, Indonesia - 42436
 			</div>
 		</div>
 	</div>
-
 	<div class="modal fade" id="mesjid" tabindex="-1" aria-labelledby="mesjidLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
@@ -242,22 +257,54 @@ Banten, Indonesia - 42436
 			</div>
 		</div>
 	</div>
-
-	<div class="nav-bottom-wrapper shadow-lg" id="nav-bottom-wrapper">
-		<div class="container-fluid px-0">
-			<div class="row g-0 text-center p-1 menu animate__animated animate__slideInUp animate__faster">
-				<a href="#" id="beranda-tab" class="col menu-item active" onclick="showContent('beranda')"><i class="bi bi-house fs-4"></i><br>Beranda</a>
-				<a href="#" id="artikel-tab" class="col menu-item" onclick="showContent('artikel')"><i class="bi bi-calendar-event fs-4"></i><br>Artikel</a>
-				<a href="#" id="riwayat-tab" class="col menu-item" onclick="showContent('riwayat')"><i class="bi bi-clock-history fs-4"></i><br>Riwayat</a>
-				<a href="#" id="profile-tab" class="col menu-item" onclick="showContent('profile')"><i class="bi bi-person fs-4"></i><br>Profil</a>
-			</div>
-		</div>
+	<div class="modal fade" id="modalProfil" tabindex="-1" aria-labelledby="modalProfilLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h1 class="modal-title fs-5" id="modalProfilLabel">Edit Profil</h1>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <form action="" method="post">
+		      <div class="modal-body">
+		        <div class="form-floating mb-2">
+					<input type="text" class="form-control shadow border-success" id="nama_lengkap_edit" value="Muhammad Bani Husni" placeholder="Nama Lengkap">
+					<label for="nama_lengkap_edit">Nama Lengkap</label>
+				</div>
+				<div class="form-floating mb-2">
+					<input type="date" class="form-control shadow border-success" id="tgl_edit" value="20/07/1993" placeholder="Tanggal Lahir">
+					<label for="tgl_edit">Tanggal Lahir</label>
+				</div>
+				<div class="form-floating mb-2">
+					<input type="text" class="form-control shadow border-success" id="jk_edit" value="Laki-laki" placeholder="Jenis Kelamin">
+					<label for="jk_edit">Jenis Kelamin</label>
+				</div>
+				<div class="form-floating mb-2">
+					<input type="text" class="form-control shadow border-success" id="no_hp_edit" value="087775587778" placeholder="Nomor HP">
+					<label for="no_hp_edit">Nomor HP</label>
+				</div>
+				<div class="form-floating mb-2">
+					<textarea class="form-control shadow border-success" placeholder="Alamat" id="alamat_edit" style="height: 100px">
+	BCS Logistics Center
+	Jl. Raya Merak KM. 115, Cilegon
+	Banten, Indonesia - 42436
+	                </textarea>
+					<label for="alamat_edit">Alamat</label>
+				</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		        <button type="submit" class="btn btn-success">Save changes</button>
+		      </div>
+	      </form>
+	    </div>
+	  </div>
 	</div>
 	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 	<script src="<?= base_url('assets/js/wow.min.js'); ?>"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script>
 		window.addEventListener('load', function() {
 			setTimeout(function() {
@@ -276,6 +323,34 @@ Banten, Indonesia - 42436
 			document.querySelector('.nav-bottom-wrapper .menu a.active').classList.remove('active');
 			document.getElementById(tab + '-tab').classList.add('active');
 		}
+
+		$('#btn-logout').click(function(event) {
+			Swal.fire({
+				title: "Logout?",
+				text: "Kamu yakin ingin keluar?",
+				icon: "warning",
+				showCancelButton: true,
+				confirmButtonText: "Ya",
+				confirmButtonColor: "#09AD74",
+				cancelButtonText: "Tidak"
+			}).then((result) => {
+				if (result.isConfirmed) {
+					// session destroy disini ya
+					// pake if ajax aja, if result nya bener maka lakukan swal di bawah
+					Swal.fire({
+						title: "See you!",
+						icon: "success",
+						showConfirmButton: false,
+  						timer: 1500,
+  						timerProgressBar: true
+					}).then((result) => {
+						if (result.dismiss === Swal.DismissReason.timer) {
+							window.location.href = 'login';
+						}
+					});
+				}
+			});
+		});
 	</script>
 </body>
 
