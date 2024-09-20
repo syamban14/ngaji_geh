@@ -153,7 +153,7 @@
 			<div class="timer" id="timer">00:00:00</div>
 		</div>
 		<div class="end-session">
-			<button id="endSessionButton" class="btn btn-danger" onclick="confirmEndSession()">Akhiri Sesi</button>
+			<button id="endSessionButton" class="btn btn-danger" onclick="confirmEndSession()" disabled>Akhiri Sesi</button>
 		</div>
 	</div>
 
@@ -327,7 +327,7 @@
 					mediaRecorder.start();
 					startRecordButton.disabled = true;
 					stopRecordButton.disabled = false;
-					// endSessionButton.disabled = true;
+					endSessionButton.disabled = true;
 				});
 
 				stopRecordButton.addEventListener('click', () => {
