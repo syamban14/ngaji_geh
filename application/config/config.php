@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$alamat = "http://" . $_SERVER['HTTP_HOST'];
+$alamat = "http://" . $_SERVER['HTTP_HOST']; // takutnya lupa, kalo udah mau ke hostingan jgn lupa pake https
 $alamat = $alamat . str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
 $config['base_url']    = $alamat; //"http://localhost/invoice";
 
