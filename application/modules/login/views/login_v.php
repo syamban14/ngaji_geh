@@ -60,7 +60,7 @@
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -74,36 +74,36 @@
 			var username = document.getElementById('username').value;
 			var password = document.getElementById('password').value;
 
-			// Logika sederhana untuk validasi
-			if (username === 'ngaji' && password === 'ngajigeh') {
-				// Tampilkan alert sukses
-				$('button[type="submit"]').attr("disabled", true);
-				$('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>' +
-					'<span role="status"> Loading...</span>');
-				// alert('Login berhasil! Anda akan diarahkan ke halaman utama.');
-
-				// Redirect ke halaman loading setelah alert
-				setTimeout(function() {
-					window.location.href = 'home';
-				}, 1000); // Delay 1 detik setelah alert sebelum ke loading
-			} else if(username === 'fikrimaulana' && password === 'ngaji') {
-                // Tampilkan alert sukses
-                $('button[type="submit"]').attr("disabled",true);
-                $('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>'+
-                                                '<span role="status"> Loading...</span>');
-                // alert('Login berhasil! Anda akan diarahkan ke halaman utama.');
-                // Redirect ke halaman loading setelah alert
-                setTimeout(function() {
-                    window.location.href = 'home_ustadz';
-                }, 1000);  // Delay 1 detik setelah alert sebelum ke loading
-			} else {
-				// Tampilkan alert jika login gagal
-				Swal.fire({
-					title: "Gagal!",
-					text: "Username dan Password tidak sesuai",
-					icon: "error"
-				});
-			}
+			$.ajax({
+				url: '<?= base_url();?>Login/auth',
+				type: 'POST',
+				data: {username: username, password: password},
+				success: function(result){
+					if (result=='OK') {
+						$('button[type="submit"]').attr("disabled", true);
+						$('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>' +
+							'<span role="status"> Loading...</span>');
+						setTimeout(function() {
+							window.location.href = 'home';
+						}, 1000); // Delay 1 detik setelah alert sebelum ke loading
+					}else{
+						Swal.fire({
+							title: "Gagal!",
+							text: "Username dan Password tidak sesuai",
+							icon: "error"
+						});
+					}
+				}
+			});
+			// .done(function() {
+			// 	console.log("success");
+			// })
+			// .fail(function() {
+			// 	console.log("error");
+			// })
+			// .always(function() {
+			// 	console.log("complete");
+			// });
 		});
 	</script>
 </body>
