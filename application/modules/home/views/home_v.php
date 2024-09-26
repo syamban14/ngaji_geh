@@ -96,7 +96,15 @@
             text-decoration: none;
             color: #3498db;
         }
+		.modal-body .student-name,
+		.modal-body .schedule-date,
+		.modal-body .schedule-time {
+			color: #09AD74;
+		}
 
+		.modal-body .card {
+			border: 1px solid #09AD74;
+		}
         /* Mobile responsive */
         @media(min-width: 768px) {
             .article {
@@ -156,7 +164,7 @@
 				</center>
 				<div class="d-flex align-items-center animate__animated animate__fadeInUp animate__faster">
 					<div class="flex-shrink-0">
-						<img class="rounded-circle shadow" src="<?= base_url(); ?>assets/images/gambar1.jpg" width="100px" height="100px">
+						<img class="rounded-circle shadow" src="<?= base_url(); ?>assets/images/santri.png" width="100px" height="100px">
 					</div>
 					<div class="flex-grow-1 ms-2 p-2 bg-white rounded-4 shadow text-success">
 						<center><strong><?= $this->session->userdata('nama');?></strong></center>
@@ -318,7 +326,7 @@ Banten, Indonesia - 42436
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="jadwalLabel">Jadwal Mengajar</h1>
+					<h1 class="modal-title fs-5" id="jadwalLabel">Jadwal Ustadz</h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
@@ -327,10 +335,83 @@ Banten, Indonesia - 42436
 						<div class="card-body p-2">
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
-									<div class="student-name">Ustadz Fikri Maulana</div>
-									<div class="schedule-date"><i class="far fa-calendar-check"></i> 13 September 2024</div>
+									<div class="student-name">Ustadz Abdul Somad Al-Riauwi</div>
+									<div class="schedule-date"><i class="far fa-calendar-check"></i> Ahad</div>
 								</div>
-								<div class="schedule-time"><i class="far fa-clock"></i> 08:00 - 08:30</div>
+								<div class="schedule-time"><i class="far fa-clock"></i> 10:00 - 18:30</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card mb-2">
+						<div class="card-body p-2">
+							<div class="d-flex justify-content-between align-items-center">
+								<div>
+									<div class="student-name">Ustadz Fikri Maulana</div>
+									<div class="schedule-date"><i class="far fa-calendar-check"></i> Senin</div>
+								</div>
+								<div class="schedule-time"><i class="far fa-clock"></i> 10:00 - 18:30</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card mb-2">
+						<div class="card-body p-2">
+							<div class="d-flex justify-content-between align-items-center">
+								<div>
+									<div class="student-name">Ustadz Adi Hidayat</div>
+									<div class="schedule-date"><i class="far fa-calendar-check"></i> Selasa</div>
+								</div>
+								<div class="schedule-time"><i class="far fa-clock"></i> 10:00 - 18:30</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card mb-2">
+						<div class="card-body p-2">
+							<div class="d-flex justify-content-between align-items-center">
+								<div>
+									<div class="student-name">Ustadz Fikri Maulana</div>
+									<div class="schedule-date"><i class="far fa-calendar-check"></i> Rabu</div>
+								</div>
+								<div class="schedule-time"><i class="far fa-clock"></i> 10:00 - 18:30</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card mb-2">
+						<div class="card-body p-2">
+							<div class="d-flex justify-content-between align-items-center">
+								<div>
+									<div class="student-name">Ustadz Abdul Somad Al-Riauwi</div>
+									<div class="schedule-date"><i class="far fa-calendar-check"></i> Kamis</div>
+								</div>
+								<div class="schedule-time"><i class="far fa-clock"></i> 10:00 - 18:30</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card mb-2">
+						<div class="card-body p-2">
+							<div class="d-flex justify-content-between align-items-center">
+								<div>
+									<div class="student-name">Ustadz Adi Hidayat</div>
+									<div class="schedule-date"><i class="far fa-calendar-check"></i> Jumat</div>
+								</div>
+								<div class="schedule-time"><i class="far fa-clock"></i> 10:00 - 18:30</div>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="card mb-2">
+						<div class="card-body p-2">
+							<div class="d-flex justify-content-between align-items-center">
+								<div>
+									<div class="student-name">Ustadz Abdul Somad Al-Riauwi</div>
+									<div class="schedule-date"><i class="far fa-calendar-check"></i> Sabtu</div>
+								</div>
+								<div class="schedule-time"><i class="far fa-clock"></i> 10:00 - 18:30</div>
 							</div>
 						</div>
 					</div>
@@ -338,6 +419,7 @@ Banten, Indonesia - 42436
 			</div>
 		</div>
 	</div>
+
 	<div class="modal fade" id="mesjid" tabindex="-1" aria-labelledby="mesjidLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">

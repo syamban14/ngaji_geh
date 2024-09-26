@@ -74,27 +74,37 @@
 			var username = document.getElementById('username').value;
 			var password = document.getElementById('password').value;
 
-			$.ajax({
-				url: '<?= base_url();?>Login/auth',
-				type: 'POST',
-				data: {username: username, password: password},
-				success: function(result){
-					if (result=='OK') {
-						$('button[type="submit"]').attr("disabled", true);
-						$('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>' +
-							'<span role="status"> Loading...</span>');
-						setTimeout(function() {
-							window.location.href = 'home';
-						}, 1000); // Delay 1 detik setelah alert sebelum ke loading
-					}else{
-						Swal.fire({
-							title: "Gagal!",
-							text: "Username dan Password tidak sesuai",
-							icon: "error"
-						});
-					}
-				}
-			});
+			// Logika sederhana untuk validasi
+			if (username === 'ngaji' && password === 'ngajigeh' || username === 'banihusni' && password === 'banihusni') {
+				// Tampilkan alert sukses
+				$('button[type="submit"]').attr("disabled", true);
+				$('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>' +
+					'<span role="status"> Loading...</span>');
+				// alert('Login berhasil! Anda akan diarahkan ke halaman utama.');
+
+				// Redirect ke halaman loading setelah alert
+				setTimeout(function() {
+					window.location.href = 'home';
+				}, 1000); // Delay 1 detik setelah alert sebelum ke loading
+			} else if(username === 'fikrimaulana' && password === 'ngaji') {
+                // Tampilkan alert sukses
+                $('button[type="submit"]').attr("disabled",true);
+                $('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>'+
+                                                '<span role="status"> Loading...</span>');
+                // alert('Login berhasil! Anda akan diarahkan ke halaman utama.');
+                // Redirect ke halaman loading setelah alert
+                setTimeout(function() {
+                    window.location.href = 'home_ustadz';
+                }, 1000);  // Delay 1 detik setelah alert sebelum ke loading
+			} else {
+				// Tampilkan alert jika login gagal
+				Swal.fire({
+					title: "Gagal!",
+					text: "Username dan Password tidak sesuai",
+					icon: "error"
+				});
+			}
+			
 			// .done(function() {
 			// 	console.log("success");
 			// })

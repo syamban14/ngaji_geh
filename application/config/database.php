@@ -80,11 +80,13 @@ $db['default'] = array(
 	'password' => 'FWOMfdrucNLwbCGsfxmVfyCwnaIBoCgP',
 	'port'     => '3306',
 	'database' => 'railway',
-	// 'hostname' => 'localhost',
-	// 'username' => 'root',
-	// 'password' => '',
-	// 'port'     => '3306',
-	// 'database' => 'railway',
+
+// 	'hostname' => 'localhost',
+// 	'username' => 'root',
+// 	'password' => '',
+// 	'port'     => '3306',
+// 	'database' => '',
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
