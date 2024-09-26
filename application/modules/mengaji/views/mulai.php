@@ -146,14 +146,14 @@
 			<p>Sesi pembelajaran ngaji dengan Ustadz telah dimulai. Anda dapat mulai belajar sesuai dengan topik yang telah disepakati.</p>
 			<center>
 				<button id="startRecord" class="btn btn-success" onclick="startTimer()">Mulai</button>
-				<button id="stopRecord" class="btn btn-warning" onclick="stopTimer()">Berhenti</button>
+				<button id="stopRecord" class="btn btn-warning" onclick="stopTimer()" disabled>Berhenti</button>
 			</center>
 			<audio id="audioPlayback" controls></audio>
 			<!-- Timer -->
 			<div class="timer" id="timer">00:00:00</div>
 		</div>
 		<div class="end-session">
-			<button id="endSessionButton" class="btn btn-danger" onclick="confirmEndSession()">Akhiri Sesi</button>
+			<button id="endSessionButton" class="btn btn-danger" onclick="confirmEndSession()" disabled>Akhiri Sesi</button>
 		</div>
 	</div>
 
@@ -325,16 +325,16 @@
 
 				startRecordButton.addEventListener('click', () => {
 					mediaRecorder.start();
-					// startRecordButton.disabled = true;
-					// stopRecordButton.disabled = false;
-					// endSessionButton.disabled = true;
+					startRecordButton.disabled = true;
+					stopRecordButton.disabled = false;
+					endSessionButton.disabled = true;
 				});
 
 				stopRecordButton.addEventListener('click', () => {
 					mediaRecorder.stop();
-					// startRecordButton.disabled = false;
-					// stopRecordButton.disabled = true;
-					// endSessionButton.disabled = false;
+					startRecordButton.disabled = false;
+					stopRecordButton.disabled = true;
+					endSessionButton.disabled = false;
 				});
 			})
 			.catch(error => console.error('getUserMedia error:', error));

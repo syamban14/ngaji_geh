@@ -75,16 +75,18 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	// 'hostname' => 'mysql.railway.internal',
-	// 'username' => 'root',
-	// 'password' => 'FWOMfdrucNLwbCGsfxmVfyCwnaIBoCgP',
-	// 'port'     => '3306',
-	// 'database' => 'railway',
-	'hostname' => 'localhost',
+	'hostname' => 'mysql.railway.internal',
 	'username' => 'root',
-	'password' => '',
+	'password' => 'FWOMfdrucNLwbCGsfxmVfyCwnaIBoCgP',
 	'port'     => '3306',
-	'database' => '',
+	'database' => 'railway',
+
+// 	'hostname' => 'localhost',
+// 	'username' => 'root',
+// 	'password' => '',
+// 	'port'     => '3306',
+// 	'database' => '',
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
