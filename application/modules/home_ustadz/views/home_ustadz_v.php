@@ -105,6 +105,15 @@
             color: #3498db;
         }
 
+		.modal-body .student-name,
+		.modal-body .schedule-date,
+		.modal-body .schedule-time {
+			color: #09AD74;
+		}
+
+		.modal-body .card {
+			border: 1px solid #09AD74;
+		}
         /* Mobile responsive */
         @media(min-width: 768px) {
             .article {
@@ -470,7 +479,7 @@ Banten, Indonesia - 42436
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <div class="student-name">Ali bin Abi Talib</div>
-                            <div class="schedule-date"><i class="far fa-calendar-check"></i> 13 September 2024</div>
+                            <div class="schedule-date"><i class="far fa-calendar-check"></i> <?php echo date('d');?> September 2024</div>
                         </div>
                         <div class="schedule-time"><i class="far fa-clock"></i> 08:00 - 08:30</div>
                     </div>
@@ -483,7 +492,7 @@ Banten, Indonesia - 42436
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <div class="student-name">Fatimah Az-Zahra</div>
-                            <div class="schedule-date"><i class="far fa-calendar-check"></i> 13 September 2024</div>
+                            <div class="schedule-date"><i class="far fa-calendar-check"></i> <?php echo date('d');?> September 2024</div>
                         </div>
                         <div class="schedule-time"><i class="far fa-clock"></i> 09:00 - 09:30</div>
                     </div>
@@ -496,7 +505,7 @@ Banten, Indonesia - 42436
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <div class="student-name">Hasan bin Ali</div>
-                            <div class="schedule-date"><i class="far fa-calendar-check"></i> 13 September 2024</div>
+                            <div class="schedule-date"><i class="far fa-calendar-check"></i> <?php echo date('d');?> September 2024</div>
                         </div>
                         <div class="schedule-time"><i class="far fa-clock"></i> 10:00 - 10:30</div>
                     </div>
@@ -509,7 +518,7 @@ Banten, Indonesia - 42436
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <div class="student-name">Husain bin Ali</div>
-                            <div class="schedule-date"><i class="far fa-calendar-check"></i> 13 September 2024</div>
+                            <div class="schedule-date"><i class="far fa-calendar-check"></i> <?php echo date('d');?> September 2024</div>
                         </div>
                         <div class="schedule-time"><i class="far fa-clock"></i> 11:00 - 11:30</div>
                     </div>
@@ -522,9 +531,9 @@ Banten, Indonesia - 42436
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <div class="student-name">Zainab binti Ali</div>
-                            <div class="schedule-date"><i class="far fa-calendar-check"></i> 13 September 2024</div>
+                            <div class="schedule-date"><i class="far fa-calendar-check"></i> <?php echo date('d');?> September 2024</div>
                         </div>
-                        <div class="schedule-time"><i class="far fa-clock"></i> 12:00 - 12:30</div>
+                        <div class="schedule-time"><i class="far fa-clock"></i> 16:30 - 17:00</div>
                     </div>
                 </div>
             </div>

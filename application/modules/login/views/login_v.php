@@ -75,7 +75,7 @@
 			var password = document.getElementById('password').value;
 
 			// Logika sederhana untuk validasi
-			if (username === 'ngaji' && password === 'ngajigeh') {
+			if (username === 'ngaji' && password === 'ngajigeh' || username === 'banihusni' && password === 'banihusni') {
 				// Tampilkan alert sukses
 				$('button[type="submit"]').attr("disabled", true);
 				$('button[type="submit"]').html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>' +
