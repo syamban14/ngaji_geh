@@ -12,11 +12,11 @@
 
 		public function index(){
 
-			public function index(){
+			
 			$this->load->view('commons/header');
 			$this->load->view('home_v');
 			$this->load->view('commons/footer');
-		}
+
 			// if ($this->session->userdata('role')=='murid') {
 			// 	$this->load->view('home_v');
 			// }elseif ($this->session->userdata('role')=='ustadz') {
