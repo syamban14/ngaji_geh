@@ -148,7 +148,7 @@
 <body class="bg-light">
     <div id="preloader">
         <div class="text-center">
-            <img class="animate__animated animate__bounceIn" src="<?= base_url();?>assets/images/robinsar-fajar.png" alt="" height="100px">
+            <img class="animate__animated animate__bounceIn" src="<?= base_url();?>assets/images/robinsar-fajar.png" alt="" height="300px">
             <p class="mb-0">
                 <div class="spinner-border spinner-border-sm text-light" role="status">
                   <span class="visually-hidden">Loading...</span>
@@ -179,7 +179,7 @@
                         <span><i class="fas fa-id-badge fa-fw"></i> Ustadz</span><br>
                         <span><i class="fas fa-mosque fa-fw"></i> Mesjid Jombang Kali</span><br>
                         <span><i class="fas fa-bookmark fa-fw"></i> Alquran/Tafsir/Hafidz</span><br>
-                        <span><i class="fas fa-street-view fa-fw"></i> Santri Saat ini : 25</span>
+                        <span><i class="fas fa-street-view fa-fw"></i> Santri Saat ini : 30</span>
                     </div>
                 </div>
             </div>
@@ -458,7 +458,7 @@ Banten, Indonesia - 42436
             </div>
             <div class="mb-3">
                 <div class="info-label">Saldo Insentif:</div>
-                <div class="info-value"><strong>Rp 1,250,000</strong></div>
+                <div class="info-value"><strong>Rp 1,300,000</strong></div>
             </div>
             <button class="btn btn-success w-100">Cairkan Insentif</button>
           </div>

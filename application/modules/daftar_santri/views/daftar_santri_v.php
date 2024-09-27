@@ -46,7 +46,7 @@
                     </div>
                     <div class="col-6 mt-2">
                         <div class="field-label">Lokasi:</div>
-                        <div class="field-value">Cilegon</div>
+                        <div class="field-value">Citangkil</div>
                     </div>
                     <div class="col-12 mt-2">
                         <div class="field-label">Progres Mengaji:</div>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="col-6 mt-2">
                         <div class="field-label">Lokasi:</div>
-                        <div class="field-value">Serang</div>
+                        <div class="field-value">Gerem</div>
                     </div>
                     <div class="col-12 mt-2">
                         <div class="field-label">Progres Mengaji:</div>
@@ -85,6 +85,32 @@
                     <div class="col-6 mt-2">
                         <div class="field-label">Nama Orangtua:</div>
                         <div class="field-value">Ali bin Abi Talib</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card santri-card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 mt-2">
+                        <div class="field-label">Nama:</div>
+                        <div class="field-value">Furqon</div>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <div class="field-label">Usia:</div>
+                        <div class="field-value">11 tahun</div>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <div class="field-label">Lokasi:</div>
+                        <div class="field-value">Jombang Kali</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <div class="field-label">Progres Mengaji:</div>
+                        <div class="field-value">Surah Al-Baqarah, Ayat 33-45</div>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <div class="field-label">Nama Orangtua:</div>
+                        <div class="field-value">Musofa</div>
                     </div>
                 </div>
             </div>
@@ -98,6 +124,10 @@
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
         </nav>
