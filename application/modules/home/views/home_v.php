@@ -167,8 +167,8 @@
 						<img class="rounded-circle shadow" src="<?= base_url(); ?>assets/images/santri.png" width="100px" height="100px">
 					</div>
 					<div class="flex-grow-1 ms-2 p-2 bg-white rounded-4 shadow text-success">
-						<center><strong>Muhammad Bani Husni</strong></center>
-						<span><i class="fas fa-id-badge fa-fw"></i> Santri</span><br>
+						<center><strong><?= $this->session->userdata('nama');?></strong></center>
+						<span><i class="fas fa-id-badge fa-fw"></i> <?= ucwords($this->session->userdata('role'));?></span><br>
 						<span><i class="fas fa-book-open fa-fw"></i> Juz 1</span><br>
 						<span><i class="fas fa-bookmark fa-fw"></i> Al-Baqoroh : 31</span>
 					</div>
@@ -481,7 +481,6 @@ Banten, Indonesia - 42436
 	    </div>
 	  </div>
 	</div>
-	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
@@ -517,8 +516,6 @@ Banten, Indonesia - 42436
 				cancelButtonText: "Tidak"
 			}).then((result) => {
 				if (result.isConfirmed) {
-					// session destroy disini ya
-					// pake if ajax aja, if result nya bener maka lakukan swal di bawah
 					Swal.fire({
 						title: "See you!",
 						icon: "success",
@@ -527,7 +524,7 @@ Banten, Indonesia - 42436
   						timerProgressBar: true
 					}).then((result) => {
 						if (result.dismiss === Swal.DismissReason.timer) {
-							window.location.href = 'login';
+							window.location.href = 'login/logout';
 						}
 					});
 				}
