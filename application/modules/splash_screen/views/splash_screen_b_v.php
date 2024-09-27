@@ -14,7 +14,7 @@
         <div class="d-flex align-items-center justify-content-center vh-100">
             <center>
                 <!-- <img class="wow animate__bounceIn" src="<?= base_url();?>assets/images/logo.png" alt="" height="120px"> -->
-                <img class="wow animate__bounceIn" src="<?= base_url();?>assets/images/robinsar-fajar.png" alt="" height="200px">
+                <img class="wow animate__bounceIn" src="<?= base_url();?>assets/images/robinsar-fajar.png" alt="" height="300px">
                 <!-- <h2 class="mb-0 text-white animate__animated animate__fadeIn">Logo Pak Bowonya mana</h2> -->
             </center>
         </div>
