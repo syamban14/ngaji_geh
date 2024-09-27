@@ -57,7 +57,7 @@
                                     <p class="fw-bold text-success mb-2">Ust. Abdul Somad Al-Riauwi</p>
                                     <p class="mb-2"><em>"Mempelajari Al-Qur'an dari dasar, mulai dari bacaan iqro atau tajwid"</em></p>
                                     <div class="quick-info mb-3 d-flex align-items-center justify-content-center">
-                                        <span><span class="fw-bold">Rp</span> 50.000</span>
+                                        <span><span class="fw-bold">Rp</span> xx.xxx</span>
                                         <span class="mx-3"><i class="fas fa-star text-warning"></i> 5</span>
                                         <span><i class="fas fa-map-marker-alt text-primary"></i> 2.5km</span>
                                     </div>
@@ -66,7 +66,7 @@
                                         data-bs-namaUstadz="Ust. Abdul Somad Al-Riauwi"
                                         data-bs-fotoUstadz="gambar1.jpg"
                                         data-bs-tentangUstadz="Mempelajari Al-Qur'an dari dasar, mulai dari bacaan iqro atau tajwid"
-                                        data-bs-tarifUstadz="50.000"
+                                        data-bs-tarifUstadz="xx.xxx"
                                         data-bs-starUstadz="5"
                                         data-bs-jarakUstadz="2.5"
                                         data-bs-mapUstadz="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8318173477423!2d106.05036417498869!3d-6.017814393967549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e418de515555555%3A0xfb224d695183e7f2!2sMasjid%20Agung%20Nurul%20Ikhlas%20Cilegon!5e0!3m2!1sen!2sid!4v1725925559670!5m2!1sen!2sid"
@@ -92,7 +92,7 @@
                                     <p class="fw-bold text-success mb-2">Ust. Adi Hidayat</p>
                                     <p class="mb-2"><em>"Mampu mengaji dengan tajwid dan Tartil. Bisa untuk setoran hafalan atau muroja'ah"</em></p>
                                     <div class="quick-info mb-3 d-flex align-items-center justify-content-center">
-                                        <span><span class="fw-bold">Rp</span> 50.000</span>
+                                        <span><span class="fw-bold">Rp</span> xx.xxx</span>
                                         <span class="mx-3"><i class="fas fa-star text-warning"></i> 4.5</span>
                                         <span><i class="fas fa-map-marker-alt text-primary"></i> 3km</span>
                                     </div>
@@ -126,7 +126,7 @@
                                     <p class="fw-bold text-success mb-2">Ust. Fikri Maulana</p>
                                     <p class="mb-2"><em>"Mengaji Al-Qur'an Dengan Metode Talaqqi. Bersanad Sampai ke Rasulullah SAW. Insya Allah bisa lancar mengaji"</em></p>
                                     <div class="quick-info mb-3 d-flex align-items-center justify-content-center">
-                                        <span><span class="fw-bold">Rp</span> 50.000</span>
+                                        <span><span class="fw-bold">Rp</span> xx.xxx</span>
                                         <span class="mx-3"><i class="fas fa-star text-warning"></i> 4.4</span>
                                         <span><i class="fas fa-map-marker-alt text-primary"></i> 4km</span>
                                     </div>
@@ -167,7 +167,7 @@
             data-bs-namaUstadz="Ust. Abdul Somad Al-Riauwi"
             data-bs-fotoUstadz="gambar1.jpg"
             data-bs-tentangUstadz="Mempelajari Al-Qur'an dari dasar, mulai dari bacaan iqro atau tajwid"
-            data-bs-tarifUstadz="50.000"
+            data-bs-tarifUstadz="xx.xxx"
             data-bs-starUstadz="5"
             data-bs-jarakUstadz="2.5"
             data-bs-mapUstadz="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8318173477423!2d106.05036417498869!3d-6.017814393967549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e418de515555555%3A0xfb224d695183e7f2!2sMasjid%20Agung%20Nurul%20Ikhlas%20Cilegon!5e0!3m2!1sen!2sid!4v1725925559670!5m2!1sen!2sid"
@@ -179,7 +179,7 @@
                 <div class="legend">
                     <p class="fw-bold mb-0 text-success">Ust. Abdul Somad Al-Riauwi</p>
                     <p class="mb-0">
-                        <span><span class="fw-bold">Rp</span> 50.000</span>
+                        <span><span class="fw-bold">Rp</span> xx.xxx</span>
                         <span class="mx-3"><i class="fas fa-star text-warning"></i> 5</span>
                         <span><i class="fas fa-map-marker-alt text-primary"></i> 2.5km</span>
                     </p>
@@ -203,7 +203,7 @@
                 <div class="legend">
                     <p class="fw-bold mb-0 text-success">Ust. Adi Hidayat</p>
                     <p class="mb-0">
-                        <span><span class="fw-bold">Rp</span> 50.000</span>
+                        <span><span class="fw-bold">Rp</span> xx.xxx</span>
                         <span class="mx-3"><i class="fas fa-star text-warning"></i> 4.5</span>
                         <span><i class="fas fa-map-marker-alt text-primary"></i> 3km</span>
                     </p>
@@ -214,7 +214,7 @@
             data-bs-namaUstadz="Ust. Fikri Maulana"
             data-bs-fotoUstadz="gambar1.jpg"
             data-bs-tentangUstadz="Mengaji Al-Qur'an Dengan Metode Talaqqi. Bersanad Sampai ke Rasulullah SAW. Insya Allah bisa lancar mengaji"
-            data-bs-tarifUstadz="50.000"
+            data-bs-tarifUstadz="xx.xxx"
             data-bs-starUstadz="4.4"
             data-bs-jarakUstadz="4"
             data-bs-mapUstadz="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8318173477423!2d106.05036417498869!3d-6.017814393967549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e418de515555555%3A0xfb224d695183e7f2!2sMasjid%20Agung%20Nurul%20Ikhlas%20Cilegon!5e0!3m2!1sen!2sid!4v1725925559670!5m2!1sen!2sid"
@@ -226,7 +226,7 @@
                 <div class="legend">
                     <p class="fw-bold mb-0 text-success">Ust. Fikri Maulana</p>
                     <p class="mb-0">
-                        <span><span class="fw-bold">Rp</span> 50.000</span>
+                        <span><span class="fw-bold">Rp</span> xx.xxx</span>
                         <span class="mx-3"><i class="fas fa-star text-warning"></i> 4.4</span>
                         <span><i class="fas fa-map-marker-alt text-primary"></i> 4km</span>
                     </p>

@@ -140,7 +140,7 @@
 <body class="bg-light">
 	<div id="preloader">
 		<div class="text-center">
-			<img class="animate__animated animate__bounceIn" src="<?= base_url(); ?>assets/images/robinsar-fajar.png" alt="" height="100px">
+			<img class="animate__animated animate__bounceIn" src="<?= base_url(); ?>assets/images/robinsar-fajar.png" alt="" height="300px">
 			<p class="mb-0">
 			<div class="spinner-border spinner-border-sm text-light" role="status">
 				<span class="visually-hidden">Loading...</span>
